@@ -1,0 +1,995 @@
+
+
+body {
+  background: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  font-size: 1.3em;
+  color: #202221;
+}
+
+/* style for heading 1 */
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3.3em;
+  font-weight: 100;
+  padding: 25px 0;
+}
+/* style for heading 2 */
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.3em;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+/* style for the text */
+p {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.3em;
+  line-height: 1.7;
+}
+
+/*this is to push anything to the right*/
+.right {
+  float: right;
+}
+
+
+/* this is the whole menu bar */
+/* CHANGE THIS TO fixed AFTER THE COMING SOON HAS ENDED*/
+.navbar-default {
+  background-color: #fff;
+  border-color: rgba(15,15,15,0.0);
+  padding-left: 5%;
+  padding-right: 5%;
+  position: fixed;
+  color: #0F0F0F;
+  transition: all 0.4s;
+}
+/* this is the mobile menu when collapsed */
+.navbar-collapse {
+  background-color: transparent;
+  text-align: center;
+}
+
+/* navigation toggle icon */
+.navbar-default .navbar-toggle{
+  border: none;
+  margin-top:0;
+  margin-right: -22px;
+  margin-bottom: 3px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 0;
+  float:right;
+}
+
+/* hover and focus state of the toggle icon */
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background: none;
+  outline: none;
+  border: none;
+  border-radius: 0;
+}
+
+/* these are the toggle bars */
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #0F0F0F;
+  text-align: center;
+  margin: 4px 0;
+  width: 30px;
+  height: 2px;
+}
+
+/* first start logo */
+.navbar-brand, #logo {
+	width: 215px;
+	height: 55px;
+  display: block;
+	padding: 0;
+  margin-left: -20px;
+	margin-top: 5px;
+	background: url(images/header/logo-incanto.svg) no-repeat;
+	text-indent: -9999px;
+  float: none;
+  transition: all 0.4s;  
+}
+
+/* the second logo, the long one that appears when you scroll down */
+#small {
+  width: 156px;
+  height: 40px;
+  padding: 0;
+  margin-top: 15px;
+  background: url(images/header/logo-incanto.svg) no-repeat;
+  text-indent: -9999px;
+  float: none;
+  margin-left: -30px;
+  margin-top: 8px;
+  transition: all 0.4s;
+}
+
+/* the menu links */
+.navbar-default .navbar-nav > li > a {
+  color: #636363;
+  text-transform: uppercase;
+  font-size: 1em;
+  letter-spacing: 2px;
+}
+
+/* hover and active state of the menu links */
+.navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus{
+  color: #202221;
+}
+
+/* header banner 
+.jumbotron {
+	background: #505050 url(images/header/bg.jpg) no-repeat;
+	background-size: cover;
+}*/ 
+
+/* to make the header banner full height and width */
+body, html {
+  height: 100%;
+  width: 100%;
+}
+.jumbotron {
+  width: 100%;
+  height: 500px;
+  text-align: center;
+}
+
+/* the jumbotron quotes centered */
+.jumbotron .header {
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  top: 40%;
+  left:5%;
+  right: 5%;
+  bottom: 40%;
+  color: #EDF2F0;
+}
+
+.slider {
+ position: relative; 
+ overflow: hidden;
+}
+
+.slider li {
+  list-style: none;
+}
+
+.slider ul li {
+  float: left; 
+  height: 500px;
+}
+
+.jumbotron .unslider-nav {
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 20px;
+}
+
+.jumbotron .unslider-nav ol li {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 0 4px;
+  text-indent: -999em;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* the button style */
+.btn {
+  margin-top: 30px;
+  background-color: #444;
+  padding: 15px 25px;
+  color:#fff;
+  border: none;
+  font-weight: 300;
+  font-size: 1em;
+  text-transform: uppercase;
+  -moz-transition: ease 0.4s;
+}
+
+/* hover style of the button */
+.btn:focus, .btn:hover {
+  background-color: #444;
+  color: #fff;
+  border: none;
+  padding: 20px 35px;
+  transition: ease 0.4s;
+}
+
+
+/* //////////////////////////// SECTION 1 //////////////////////////////////// */
+
+
+/* making the container full width  */
+.section1 .container {
+  margin-top: -30px;
+}
+
+/* top margin for the header  */
+.section1 h2, .section3 h2 {
+  margin-top: -10px;
+}
+
+
+
+/* the space for the left column */
+.section1 .left-col .col-md-6   {
+  padding-top: 3%;
+  padding-left: 3%;
+  padding-right: 3%;
+  padding-bottom: 3%;
+
+}
+
+/* delete space for full width and height of the img */
+.section1 .right-col .col-md-6, .section3 .right-col .col-md-6 { 
+  margin-top: 0;
+  padding-right:0;
+  padding-left: 0;
+}
+
+.section1 .right-col {
+  height: 100%;
+}
+
+.section1 .right-col .col-md-6 {
+  height: 100%;
+  max-width: 100%;
+  position: relative;
+  display: inline-block;  
+
+}
+
+.section1 .inner {
+   position: absolute;    
+    height: 100%;
+    text-align: center;    
+    width: 100%;
+    vertical-align: middle;
+    top: calc(50% - 160px);
+    
+}
+
+.section1 .inner:before{
+  content: '';
+   display: inline-block;
+   height: 100%;
+   vertical-align: middle;
+}
+
+.section1 .right-col h3 {
+  font-size: 50px;
+ display: inline-block;
+ color: #0F0F0F;
+ margin-bottom: 0;
+ margin-top: 0;
+ line-height: 1.3;
+
+ }
+
+ #reverse {
+  animation-direction: reverse;
+  -webkit-animation-direction: reverse;
+  -moz-animation-direction: reverse;
+  -o-animation-direction: reverse;
+}
+
+.section1-battle{
+    background:  url(images/section1/battle.svg) no-repeat;
+  background-size: 150px 75px;
+  position: absolute;
+  width: 150px;
+  height: 75px;
+  text-align: center;
+  left: 40%;
+
+}
+
+
+/* and make the img full width to fill the column */
+.section1 img{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+/* chopo chicken logo size in section1 */
+.section1 .section1-logo img {
+  width: inherit; 
+  height: 90px;
+  margin: 0 auto;
+
+}
+
+/* the emojis */
+.section1 .emoji-punch img {
+  width: 30px;
+  height: 27px;
+  display: inline-block;
+  position: relative;
+}
+
+/* align the text to justify */
+.section1 p, .section3 p {
+  text-align: justify;
+ 
+}
+
+
+
+/* //////////////////////////// SECTION 2 //////////////////////////////////// */
+
+
+/* styling the row with bg, the text color and spacing  */
+.section2 .row {
+ color: #EDF2F0;
+ background-color: #333333; 
+ padding: 60px 80px;
+}
+
+/* the title for section2 */
+.section2 h2 {
+  font-size: 2em;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 1%;
+}
+
+/* the emoji */
+.icon-heart .glyphicon {
+  color: #fff;
+  animation-name: color_change;
+  animation-duration: 1s;
+  animation-iteration-count: normal;
+  animation-direction: normal;
+  -webkit-animation-direction: normal;
+  -moz-animation-direction: normal;
+  -ms-animation-direction: normal;
+  -o-animation-direction: normal;
+  -webkit-animation: color_change 0.5s infinite alternate-reverse;
+  -moz-animation: color_change 0.5s infinite alternate-reverse;
+  -ms-animation: color_change 0.5s infinite alternate-reverse;
+  -o-animation: color_change 0.5s infinite alternate-reverse;
+  animation: color_change 0.5s infinite alternate-reverse;
+  transition: ease 0.5s all;
+}
+
+@-webkit-keyframes color_change {
+  from { color: #555;  }
+  to { color: #fff; }
+}
+@-moz-keyframes color_change {
+from {color: #555;  }
+  to { color: #fff; }
+}
+
+@-ms-keyframes color_change {
+from {color: #555;  }
+  to { color: #fff; }
+}
+@-o-keyframes color_change {
+from { color: #555;  }
+  to { color: #fff; }
+}
+@keyframes color_change {
+from { color: #555;  }
+  to { color: #fff; }
+}
+
+
+/* //////////////////////////// SECTION 3 //////////////////////////////////// */
+
+
+/* the emoji */
+.section3 .emoji-love img {
+  width: 29px;
+  height: 30px;
+  margin-top: -10px;
+  display: inline-block;
+  position: relative;
+}
+
+/* the space for the pushed right column  */
+.section3 .left-col .col-md-6 {
+  padding-top: 5%;
+  padding-left: 3%;
+  padding-right: 3%;
+  padding-bottom: 5%;
+}
+
+/* and make the img full width to fill the column */
+.section3 .right-col img{
+  width: 100%;
+}
+
+
+/* //////////////////////////// SECTION 4 //////////////////////////////////// */
+
+
+/* change bg color of the menu section */
+.section4 {
+  background-color: #EAEAEA;
+}
+
+/* add more top and bottom space */
+.section4 .container {
+  padding-top: 4%;
+  padding-bottom: 8%;
+}
+
+/* erase the top margin of the book icon */
+.section4 i {
+  margin-top: 0;
+}
+
+/* the menu title */
+.section4 h3 {
+  margin-bottom: 20px;
+  font-size: 1em;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+/* this is the top and bottom line on the tabs */
+.section4 hr.line {
+  height: 1px; 
+  background-color: #000;
+}
+
+/* and this line is the one that goes inside the menu that separates the items */
+.section4 hr.line2 {
+  width: 80%;
+  background-color: #848484;
+}
+
+/* the item bold title */
+.section4 h4 {
+  font-size: 1em;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+/* the intro menu text */
+.section4 .text-menu {
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+/* this is the space from the tabs and the menu */
+.section4 .tab-content > .active {
+margin-top: 50px;
+text-align: center;
+}
+
+/* the tab text should be black */
+.nav-justified > li > a {
+  color: #000;
+}
+
+/* erase the bg hover style and make it bold when hover */
+.nav-justified > li > a:hover, .nav-justified > li > a:focus {
+  background-color: transparent;
+  font-weight: 800;
+}
+
+/* and when its active, leave it bold */
+.section4 .nav-pills > li.active > a {
+  background-color: transparent;
+  color: #000;
+  font-weight: 800;
+}
+
+/* right side of the menu */
+.section4 .right-col {
+  padding-top: 20.4%;
+  padding-right: 5%;
+  padding-left: 5%;
+  padding-bottom: 20.4%;
+  background-color: #fff;
+  text-align: justify;
+}
+
+
+/* the left side of the menu, to allow the icon and text */
+.section4 .col-sm-6 {
+  padding-right: 0;
+  padding-left: 0;
+  display: block;
+  float: left;
+  position: relative;
+}
+
+.section4 .left-col {
+   background-color: #0F0F0F;
+}
+
+/* the title on the left side */
+.section4 .left-col h2  {
+  position: absolute;
+  top: 49%;
+  color: #fff;
+  font-size: 1em;
+  width: 100%;
+  display: block;
+
+}
+
+.section4 .right-col h3  {
+  font-size: 22px;
+  display: block;
+  margin: 0;
+}
+
+/* the pollo icon style */
+.section4 .left-col .icon-pollo {
+  background:  url(images/section4/pollo.svg) no-repeat;
+  background-size: 50px 50px;
+  position: absolute;
+  top: 43%;
+  width: 50px;
+  margin: 0 auto; 
+  height: 50px;
+  right: 45.5%;
+}
+
+/* the sides icon style */
+.section4 .left-col .icon-sides {
+  background:  url(images/section4/sides.svg) no-repeat;
+  background-size: 50px 50px;
+  position: absolute;
+  top: 43.7%;
+  width: 50px;
+  margin: 0 auto; 
+  height: 50px;
+  right: 45.5%;
+}
+
+/* the beverages icon style */
+.section4 .left-col .icon-beverages {
+  background:  url(images/section4/beverages.svg) no-repeat;
+  background-size: 27px 50px;
+  position: absolute;
+  top: 42.3%;
+  width: 40px;
+  margin: 0 auto; 
+  height: 50px;
+  right: 45.5%;
+}
+
+/* the sauces icon style */
+.section4 .left-col .icon-sauces {
+  background:  url(images/section4/sauces.svg) no-repeat;
+  background-size: 40px 40px;
+  position: absolute;
+  top: 44%;
+  width: 40px;
+  margin: 0 auto; 
+  height: 40px;
+  right: 46%;
+}
+
+/* the combos icon style */
+.section4 .left-col .icon-combos {
+  background:  url(images/section4/combos.svg) no-repeat;
+  background-size: 50px 50px;
+  position: absolute;
+  top: 42.5%;
+  width: 50px;
+  margin: 0 auto; 
+  height: 50px;
+  right: 45.5%;
+}
+
+.section4 .right-col .link-menu {
+  text-decoration: none;
+  color: #0F0F0F;
+
+}
+
+.section4 .right-col .arrow {
+  display: inline-block;
+   -webkit-animation-duration: 5s;
+   -moz-animation-duration: 5s;
+   -ms-animation-duration: 5s;
+   -o-animation-duration: 5s;
+   animation-duration: 5s;
+}
+
+.section4 .right-col .icon-bowl {
+  background:  url(images/section4/icon-bowl.svg) no-repeat;
+  background-size: 35px 35px;
+  color: #0F0F0F;
+  width: 35px;
+  margin: 0 auto; 
+  height: 35px;
+  float: right !important;
+  text-align: right;
+}
+
+.section4 .right-col .icon-combo {
+  background:  url(images/section4/icon-combo.svg) no-repeat;
+  background-size: 45px 45px;
+  color: #0F0F0F;
+  width: 45px;
+  margin: 0 auto; 
+  height: 45px;
+  float: right !important;
+  text-align: right;
+  margin-top: -13px;
+}
+
+.section4 .right-col .icon-amazebowl {
+  background:  url(images/section4/icon-amazebowl.svg) no-repeat;
+  background-size: 45px 45px;
+  color: #0F0F0F;
+  width: 45px;
+  margin: 0 auto; 
+  height: 45px;
+  float: right !important;
+  text-align: right;
+  margin-top: -15px;
+}
+
+.section4 .left-col .icon-amazebowl {
+background:  url(images/section4/icon-amazebowl.svg) no-repeat;
+  background-size: 50px 50px;
+  color: #fff !important;
+  position: absolute;
+  top: 42.5%;
+  width: 50px;
+  margin: 0 auto; 
+  height: 50px;
+  right: 45.5%;
+}
+
+.section4 .right-col .icon-sides {
+  background:  url(images/section4/icon-sides.svg) no-repeat;
+  color: #0F0F0F;
+  width: 50px;
+  margin: 0 auto; 
+  height: 35px;
+  float: right !important;
+  text-align: right;
+}
+
+.section4 .right-col .icon-sauces {
+  background:  url(images/section4/icon-sauces.svg) no-repeat;
+  color: #0F0F0F;
+  width: 35px;
+  margin: 0 auto; 
+  height: 35px;
+  float: right !important;
+  text-align: right;
+  margin-top: -8px;
+}
+
+.section4 .right-col .icon-extras {
+  background:  url(images/section4/icon-extras.svg) no-repeat;
+  color: #0F0F0F;
+  width: 60px;
+  margin: 0 auto; 
+  height: 35px;
+  float: right !important;
+  text-align: right;
+  margin-top: -5px;
+}
+
+
+.section4 .right-col .number {
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 50%;
+  border: 2px solid #0F0F0F;
+  padding: 1px 5px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: -4px;
+}
+/* //////////////////////////// SECTION 5 //////////////////////////////////// */
+  
+
+/* give the container less space */
+.section5 .container {
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+/* the bold text under the street */
+.section5 .container small {
+  font-size: 65%;
+  text-transform: uppercase;
+}
+
+/* the icons space */
+.section5 i {
+  margin-top: 20px;
+}
+
+
+/* //////////////////////////// SECTION 8 //////////////////////////////////// */
+
+
+/* change the bg color */
+.section8 {
+  background-color: #EAEAEA;
+}
+
+/* less space for the container */
+.section8 .container {
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+/* the icons */
+.section8 .container .fa{
+  margin-right: 2%;
+  margin-left: 2%;
+  font-size: 2.5em;
+  color: #0F0F0F;
+}
+
+
+/* //////////////////////////// SECTION 9 //////////////////////////////////// */
+
+
+/* change this bg color as well */
+.section9 {
+  background-color: #0F0F0F;
+}
+
+/* the container space and color */
+.section9 .container {
+  width: 90%;
+  padding-top: 4%;
+  padding-bottom: 4%;
+ color: #484848;
+}
+
+/* Chopo`s logo  */
+.section9 .container img {
+  margin-left: auto;
+  margin-right: auto;
+  width: inherit; 
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+/* the hover state for the console icon */
+.section9 .footer > small > .glyphicon-console:hover {
+  color: #00dd00;
+}
+
+/* the hover state for the heart icon */
+.section9 .footer > small > .glyphicon-heart:hover {
+  color: #f20000;
+}
+
+
+/* //////////////////////////// FORM SUCCESS //////////////////////////////////// */
+
+.form-container { 
+  margin-top: 45px; 
+}
+
+.form-container .row {
+  padding: 4%; 
+}
+
+.form-h2 {
+  color: #0F0F0F;
+}
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */ 
+
+ @media only screen and (min-width : 320px) and (max-width: 767px), (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5) {
+ .coming-soon {max-width: 600px;  max-height: 900px;  position: absolute;   top: 0%;   left:5%;   right: 5%;   bottom: 5%;}   
+h2 {line-height: 1.1;}
+.jumbotron {  background: #505050 url(images/header/ios-bg.jpg) no-repeat; background-size: cover;}
+.jumbotron .btn {margin-top: 10px;}
+.jumbotron br {display: none;}
+.jumbotron .header { width: inherit; height: inherit; position: absolute; top: 25%; left:5%; right: 5%; bottom: 25%;}
+.jumbotron #carousel-h1 h1 { font-size: 2.5em; }
+.jumbotron #carousel-h1 .h1-peru {font-size: 3.8em;}
+#menubar {padding: 10px 40px; height: 40px; }
+.navbar-collapse {background-color: #fff; border-bottom: 1px solid #eee;}
+.navbar-brand, #logo {  width: 90px;  height: 57px; padding: 0;  margin-left: -10px;}
+.section1 .section1-logo img {  width: inherit;   height: 75px;}
+
+
+.section1 .right-col .col-md-6 {
+  height: 100%;
+  max-width: 100%;
+  position: relative;
+  display: inline-block;  
+  top: 5px;
+}
+
+.section1 .inner {
+   position: absolute;    
+    height: 100%;
+    text-align: center;    
+    width: 100%;
+    vertical-align: middle;
+    
+}
+
+.section1 .inner:before{
+  content: '';
+   display: inline-block;
+   height: 100%;
+
+}
+
+.section1 .right-col h3 {
+  font-size: 20px;
+ display: inline-block;
+ color: #0F0F0F;
+ margin-bottom: 0;
+ margin-top: 0;
+ line-height: 1.3;
+ position: absolute;
+
+ }
+
+
+.section1-battle{
+    background:  url(images/section1/battle.svg) no-repeat;
+  background-size: 75px 50px;
+  position: absolute;
+  width: 75px;
+  height: 50px;
+  text-align: center;
+
+}
+
+
+/* and make the img full width to fill the column */
+.section1 img{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.section1 .container .left-col, .section2 .container, .section3 .container .left-col, .section4 .container, .section5 .container .row .reservation { padding-right: 15px; padding-left: 15px; margin-right: auto; margin-left: auto;} 
+.section1 .container .left-col, .section2 .container .row, .section3 .left-col .col-md-6, .section4 .container, .section5 .container, .section7 .container, .section8 .container, .section9 .container {padding-top: 60px; padding-bottom: 60px; }
+.section1 .emoji-punch {  width: 30px;  height: 27px;  display: inline-block;  position: relative;}
+.section1 br { display: none;}
+.section2 .container .row {padding-right: 15px; padding-left: 15px;}
+.section2 h2 { margin-bottom: 4%;}
+.section4 .text-menu { font-size: 15px; line-height: 1.2; }
+.section4 .container {  padding-top: 80px; padding-bottom: 80px;}
+.section4 .right-col {padding: 10%; background-color: transparent; }
+.section4 #Chicken .col-sm-6 {color: #0F0F0F; background-color: #fff;}
+.section4 #Bowls .col-sm-6 {color: #0F0F0F; background-color: #fff;}
+.section4 #Sides .col-sm-6 {color: #0F0F0F; background-color: #fff;}
+.section4 #Sauces .col-sm-6 {color: #0F0F0F; background-color: #fff;}
+.section4 .nav-justified > li > a {padding-bottom: 0;}
+.section4 .tab-content > .tab-pane { margin-top: 20px; }
+.section4 .line { margin-top: 5px; margin-bottom: 5px;}
+.section4 .right-col h3 { font-size: 15px; }
+.section4 .right-col .icon-bowl, .section4 .right-col .icon-combo, .section4 .right-col .icon-amazebowl, .section4 .right-col .icon-sides, .section4 .right-col .icon-sauces { background-size: 25px; width: 25px; height: 25px;}
+.section4 .right-col .icon-combo {background-size: 30px; width: 30px; height: 30px;}
+.section4 .right-col .icon-amazebowl {background-size: 25px; height: 35px; width: 30px;}
+.section4 .right-col .icon-sides {background-size: 35px; height: 30px; width: 45px;}
+.section4 .right-col .icon-extras {background-size: 40px; height: 30px; width: 40px;}
+.section4 .right-col i{font-size: 14px !important; }
+.section4 .right-col p { font-size: 15px; text-align: left;}
+.section4 hr.line2, .section4 #Chicken hr.line2 {border-top: 1px solid #ddd; }
+.section6 .container iframe {width: 93%;}
+.section7 .btn { margin: 0 auto; text-align: center; float: none; margin-top: 4%; }
+.section9 .container .left { margin:0 auto; text-align: center; float: none; margin-top: 5%; width: 100%; }
+.section9 .container .right {margin:0 auto; text-align: center; float: none; margin-top: 0; width: 100%;}
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) and (max-width: 991px) {
+  .coming-soon {width: 70%;  height: 80%;  position: absolute;   top: -20%;   left:5%;   right: 5%;   bottom: 10%;}   
+.jumbotron {  background: #505050 url(images/header/sm-bg.jpg) no-repeat; background-size: cover;}
+.jumbotron #carousel-h1 .h1-peru {font-size: 5em;}
+.navbar-brand, #logo { width: 119px; margin-left: -30px ;}
+#small { width: 140px; margin-left: -30px; background-size: 100px 30px; margin-top: 10px;}
+#bs-example-navbar-collapse-1 {margin-right: -30px;}
+.navbar-default .navbar-nav > li > a { font-size: 1em; padding-right: 8px; padding-left: 8px;}
+.section1 .left-col .col-md-6 {padding: 0;}
+.section1 .container .left-col, .section2 .container .row, .section3 .container .left-col, .section5 .container, .section9 .container {padding: 100px;}
+.section3 .container .left-col .col-md-6 > p {margin: 0; padding-bottom: 100px;}
+.section3 .left-col .col-md-6 {padding: 0;}
+.section4 .container {width: 95%; padding-top: 100px; padding-bottom: 100px;}
+.section4 .container .nav > li > a {padding: 0; }
+.section4 .col-sm-6 {width: 100%; margin-top: -20px;}
+.section4 .nav {padding-left: 40px;}
+.section4 .text-menu { font-size: 15px; line-height: 1.2; }
+.section4 .right-col { padding: 5%;}
+.section5 i {margin-top: 0; font-size: 24px;} .section5 p {margin-bottom: 0;} .section5 .fa-map-signs, .section5 .fa-envelope-o {margin-top: 20px;} 
+.section7 .container {padding-top: 100px; padding-bottom: 100px;}
+.section8 .container {padding: 50px; }
+.section8 .container .fa {font-size: 24px; padding-left: 20px; padding-right: 20px;}
+.section9 .container .left { margin:0 auto; text-align: center; float: none; margin-top: 5%; width: 100%; }
+.section9 .container .right {margin:0 auto; text-align: center; float: none; margin-top: 0; width: 100%;}
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) and (max-width: 1199px){
+  .coming-soon {width: 60%;  height: 70%;  position: absolute;   top: -35%;   left:5%;   right: 5%;   bottom: 10%;}   
+  h2 { font-size: 2em; }
+  .section1 h2, .section3 h2 {margin-bottom: 15px;}
+  p {font-size: 1.2em;}
+.navbar-brand, #logo {  width: 119px; margin-left: -30px; }
+#small { width: 140px; margin-left: -30px; background-size: 100px 30px; margin-top: 10px;}
+.navbar-default .navbar-nav > li > a { font-size: 1.1em;}
+.jumbotron #carousel-h1 .h1-peru {font-size: 4em;}
+#carousel-h1 h1  {font-size: 3.5em;}
+.section1 .section1-logo img {  width: inherit;   height: 50px;}
+.section1 .left-col .col-md-6 {padding-top: 3%; padding-bottom: 2%;}
+.section3 .left-col .col-md-6 {padding-top: 3%; padding-bottom: 3%;}
+.nav-justified > li > a { padding-left: 5px; padding-right: 5px; }
+.nav-justified {margin-left: 30px;}
+.section4 .text-menu { font-size: 15px; line-height: 1.2; }
+.section4 p {  font-size: 1em;}
+.section4 #Bowls .left-col img {min-height: 680px;}
+.section4 #Sides .left-col img, .section4 #Sides .right-col {min-height: 615px;}
+.section4 .right-col {  padding-top: 4%; padding-bottom: 2.5%; min-height: 542px;}
+.section4 hr.line2 { margin-top: -2px; margin-bottom: -2px; }
+.section5 i {font-size: 20px; margin-top: 20px;}
+.section7 .container {width: 75%;}
+.section8 .container {padding-top: 30px; padding-bottom: 30px;}
+.section8 .container .fa {font-size: 20px;}
+.section9 .container .right, .section9 .container .left { margin-top: 14%; }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) and (max-width: 1399px){
+  .coming-soon {width: 40%;  height: 50%;  position: absolute;   top: -40%;   left:5%;   right: 5%;   bottom: 10%;} 
+  .jumbotron #carousel-h1 .h1-peru {font-size: 5em;}
+.section1 .section1-logo img {  width: inherit; height: 60px;}
+.section1 .left-col .col-md-6, .section2 .container .row, .section5 .container  {padding: 3%;}
+.section3 .container .left-col .col-md-6 {padding: 3%;}
+.section4 .container {padding-top: 8%;}
+.section4 #Bowls .left-col img {min-height: 722px;}
+.section4 .right-col { padding-top: 10%; padding-bottom: 10%;  min-height: 658px;  }
+.section4 hr.line2 { margin-top: 5px; margin-bottom: 5px; }
+.section7 .container, .section9 .container { padding-top: 5.5%; padding-bottom: 5.5%; }
+.section7 .container { width: 90%; }
+.section8 .container {padding-top: 3%; padding-bottom: 3%;}
+}
+
+@media only screen and (min-width : 1400px) and (max-width : 1600px){
+  .coming-soon {width: 40%;  height: 50%;  position: absolute;   top: -40%;   left:5%;   right: 5%;   bottom: 10%;} 
+#carousel-h1 h1 {font-size: 5em;}
+.jumbotron #carousel-h1 .h1-peru {font-size: 6em;}
+.section1 .left-col .col-md-6, .section3 .left-col .col-md-6 {padding-top: 5%; padding-bottom: 5%;}
+.section2 .row {padding: 4%;}
+.section4 .nav-pills > li > a {font-size: 1.2em;}
+.section4 h4 {font-size: 1.2em;}
+.section4 .text-menu {font-size: 14px;}
+.section4 .left-col {min-height: 658px;}
+.section4 #Sides .left-col {min-height: 822px !important;}
+.section4 #Sauces .left-col {min-height: 754px !important;}
+.section4 .left-col h2 {font-size: 2.5em; top:43%; min-height: 700px;}
+.section4 .right-col { padding-top: 10%; padding-bottom: 10%;  min-height: 658px;  }
+.section4 hr.line2 { margin-top: 5px; margin-bottom: 5px; }
+.section4 #Bowls .left-col img {min-height: 722px;}
+.section4 #Bowls .right-col {padding-top: 8%;}
+.section5 .row .fa {font-size: 18px;}
+.section5 .container {padding-top: 3%; padding-bottom: 3%;}
+.section8 .container {padding-top: 3%; padding-bottom: 3%;}
+.section8 .container .fa {font-size: 2.2em;}
+}
+

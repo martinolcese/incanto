@@ -1,0 +1,202 @@
+<?php
+/* Set e-mail recipient */
+$myemail = "contact@chopochicken.com";
+
+/* Check all form inputs using check_input function */
+$name = check_input($_POST['inputName'], "");
+$email = check_input($_POST['inputEmail'], "");
+$message = check_input($_POST['inputMessage'], "");
+
+/* If e-mail is not valid show error message */
+if (!preg_match("/([\w\-]+\@[\w\-]+\.[\w\-]+)/", $email))
+{
+show_error("Invalid e-mail address");
+}
+/* Let's prepare the message for the e-mail */
+
+$subject = "New message from Chopo Chicken`s website";
+
+$message = "
+
+You received a new message submission:
+
+Name: 
+$name
+
+E-mail: 
+$email
+
+Message:
+$message
+
+";
+
+/* Send the message using mail() function */
+mail($myemail, $subject, $message);
+
+/* Redirect visitor to the thank you page */
+header('Location: http://www.chopochicken.com');
+exit();
+
+/* Functions we used */
+function check_input($data, $problem='')
+{
+$data = trim($data);
+$data = stripslashes($data);
+$data = htmlspecialchars($data);
+if ($problem && strlen($data) == 0)
+{
+show_error($problem);
+}
+return $data;
+}
+
+function show_error($myError)
+{
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+
+		<title>Chopo chicken - Charcoal Roasted Chicken, Organic Food Restaurant</title>
+
+	    <meta charset="UTF-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <meta name="identifier-url" content="http://www.chopochicken.com" />
+	    <meta name="title" content="Chopo Chicken" />
+	    <meta name="description" content="Welcome!" />
+	    <meta name="abstract" content="Restaurant" />
+	    <meta name="keywords" content="Chopo, chicken, Chopo Chicken, roasted chicken, roasted chicken delivery, roast chickens, roasted chickens, healthy chicken, chicken delivery" />
+	    <meta name="author" content="Martin Valdes Olcese for Chopo Chicken" />
+	    <meta name="revisit-after" content="90" />
+	    <meta name="language" content="en" />
+	    <meta name="copyright" content="� 2016 Chopo Chicken. All rights reserved." />
+	    <meta name="robots" content="All" />
+
+		<!--THIS IS THE H1-->
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700' rel='stylesheet' type='text/css'>
+		<!--THIS IS THE H2, P and Alternative 400-->
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,800' rel='stylesheet' type='text/css'>
+
+		<!--THIS IS FOR THE FONT AWESOME ICONS-->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+		<!-- BOOTSTRAP CSS and style -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="style.css" rel="stylesheet">
+		<link href="css/animate.min.css" rel="stylesheet">
+		<link href="css/hover-min.css" rel="stylesheet" media="all">
+
+		<!-- these are the favicons -->
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../images/favicon/favicon-144.png">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../images/favicon/favicon-114.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../images/favicon/favicon-72.png">
+		<link rel="apple-touch-icon-precomposed" sizes="57x57" href="../images/favicon/favicon-57.png">
+		<link rel="shortcut icon" href="../images/favicon/favicon-32.png">
+		<link rel="shortcut icon" href="../images/favicon/favicon-16.png">
+		<link rel="shortcut icon" href="../images/favicon/favicon.ico" type="image/x-icon">
+
+	</head>
+
+	<body>
+				<div class="row">
+					<nav class="navbar navbar-default navbar-fixed-top" id="menubar">
+
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<div class="navbar-header">
+								
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+
+							<div class="logo2">
+									<a class="navbar-brand wow swing hvr-wobble-vertical img-responsive" id="small" href="http://www.chopochicken.com">Chopo chicken</a>
+							</div>
+
+							<div class="logo">
+									<a class="navbar-brand wow swing hvr-wobble-vertical img-responsive" id="logo" href="http://www.chopochicken.com">Chopo chicken</a>
+							</div>
+							
+						</div>
+
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav navbar-right">
+								<li><a data-scroll href="www.chopochicken.com/" class="wow swing hvr-wobble-skew">Back to Website</a></li>
+							</ul>
+						</div><!-- /.navbar-collapse -->
+					</nav><!-- /.nav -->
+				</div><!-- /.row -->
+		
+	<div class="form-container">
+		<div class="container">
+			<div class="row text-center">
+				<div class="row text-center">
+					<h1>Oh, no! Something`s wrong.</h1>
+					<p>Please, check if your e-mail address is set correctly and try again.</p>
+
+				<div class="button wow bounceIn" data-wow-delay="1.5s">
+					<a href="www.chopochicken.com"><button type="button" class="btn btn-warning ">Go Back to Chopo Chicken`s Website!</button></a>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>		
+
+<!--======================================================= SECTION 8 ===========================================================-->
+		<div class="section8">
+			<div class="container">
+				<div class="row text-center">
+					<a href="https://www.facebook.com/chopochicken"><i class="fa fa-facebook wow zoomIn hvr-bounce-in"  data-wow-delay="0.3s"></i></a>
+					<a href="https://www.twitter.com/chopochicken"><i class="fa fa-twitter wow zoomIn hvr-bounce-in"  data-wow-delay="0.6s"></i></a>
+					<a href="https://www.instagram.com/chopochicken"><i class="fa fa-instagram wow zoomIn hvr-bounce-in"  data-wow-delay="0.9s"></i></a>
+					<a href="https://plus.google.com/118332346468752978447"><i class="fa fa-google-plus wow zoomIn hvr-bounce-in"  data-wow-delay="1.2s"></i></a>
+				</div>
+			</div><!-- /.container -->
+		</div><!--==================================== END SECTION 8 ==================================-->
+
+<!--======================================================= SECTION 9 ===========================================================-->
+		<div class="section9">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12 text-center">
+
+						<div class="footer-img wow zoomIn hvr-float-shadow"  data-wow-delay="0.5s">
+							<img src="images/section9/ChopoChickenLogoFooter.svg" alt="Chopo Chicken Footer Logo" class="img-responsive"/>
+						</div>
+
+						<div class="footer wow zoomIn"  data-wow-delay="1s">
+							<small><strong>&copy; 2016 Chopo Chicken.</strong> All Rights Reserved. </small>
+						</div>
+
+						<div class="footer wow zoomIn"  data-wow-delay="1s">
+							<small>Website <span class="glyphicon glyphicon-console"></span> by <i>Martin Olcese</i> with <span class="glyphicon glyphicon-heart"></span>  </small>
+						</div>
+
+					</div>
+				</div><!-- /.row -->
+			</div><!-- /.container -->
+		</div><!--==================================== END SECTION 9 ==================================-->
+
+
+		<script src="js/smooth-scroll.min.js"></script>
+		<script src="js/wow.min.js"></script> <script>new WOW().init();</script>
+		<script	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script	src="js/main.js"></script>
+	</body> 
+</html>
+
+
+
+
+<?php
+exit();
+}
+?>
