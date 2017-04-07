@@ -1,5 +1,3 @@
-
-
 body {
   background: #fff;
   font-family: 'Montserrat', sans-serif;
@@ -9,36 +7,72 @@ body {
   color: #202221;
 }
 
+.row {
+  margin-right: 0;
+  margin-left: 0;
+}
+
 /* style for heading 1 */
 h1 {
   font-family: 'Montserrat', sans-serif;
   font-size: 3.3em;
-  font-weight: 100;
-  padding: 25px 0;
+  font-weight: 200;
+  padding: 0 0 25px 0;	
+	letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 0;
+  text-align: center;
 }
 /* style for heading 2 */
 h2 {
   font-family: 'Montserrat', sans-serif;
-  font-size: 2.3em;
-  font-weight: 700;
+  font-size: 2.7em;
+  font-weight: 300;
   text-transform: uppercase;
   line-height: 1.3;
-}
-/* style for the text */
-p {
-  font-family: 'Raleway', sans-serif;
-  font-size: 1.3em;
-  line-height: 1.7;
+  letter-spacing: 2px;
+  padding: 0 0 25px 0;	
 }
 
-/*this is to push anything to the right*/
-.right {
-  float: right;
+h3 {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 20px;
+  overflow: hidden;
+  text-align: center;
+  color: #202221;
+}
+
+h4  {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  margin-top: 0;
+  overflow: hidden;
+  text-align: center;
+  color: #202221;
+}
+
+p {
+    font-family: 'Raleway', sans-serif;
+    font-size:16px;
+    line-height: 1.7;
+    font-weight: 400;
+    color: #202221;
+}
+
+
+.lead-p {
+  font-family: 'Raleway', sans-serif;
+  font-size:1.4em;
 }
 
 
 /* this is the whole menu bar */
-/* CHANGE THIS TO fixed AFTER THE COMING SOON HAS ENDED*/
 .navbar-default {
   background-color: #fff;
   border-color: rgba(15,15,15,0.0);
@@ -57,15 +91,16 @@ p {
 /* navigation toggle icon */
 .navbar-default .navbar-toggle{
   border: none;
-  margin-top:0;
+  margin-top: 4px;
   margin-right: -22px;
   margin-bottom: 3px;
-  width: 50px;
+  width: 45px;
   height: 50px;
   text-align: center;
   padding: 10px;
   border-radius: 0;
   float:right;
+  
 }
 
 /* hover and focus state of the toggle icon */
@@ -78,12 +113,12 @@ p {
 
 /* these are the toggle bars */
 .navbar-default .navbar-toggle .icon-bar {
-  background-color: #0F0F0F;
+  background-color: #969696;
   text-align: center;
-  margin: 4px 0;
-  width: 30px;
+  width: 25px;
   height: 2px;
 }
+
 
 /* first start logo */
 .navbar-brand, #logo {
@@ -101,14 +136,14 @@ p {
 
 /* the second logo, the long one that appears when you scroll down */
 #small {
-  width: 156px;
+  width: 140px;
   height: 40px;
   padding: 0;
   margin-top: 15px;
   background: url(images/header/logo-incanto.svg) no-repeat;
   text-indent: -9999px;
   float: none;
-  margin-left: -30px;
+
   margin-top: 8px;
   transition: all 0.4s;
 }
@@ -126,870 +161,832 @@ p {
   color: #202221;
 }
 
-/* header banner 
-.jumbotron {
-	background: #505050 url(images/header/bg.jpg) no-repeat;
-	background-size: cover;
-}*/ 
-
 /* to make the header banner full height and width */
 body, html {
   height: 100%;
   width: 100%;
 }
+
 .jumbotron {
+  background: #505050 url(images/header/banner-lg.jpg);
+ background-size: cover;
+background-repeat: no-repeat;
+background-position: center center;
+  padding: 0; 
+  margin-bottom: 0;
   width: 100%;
-  height: 500px;
-  text-align: center;
+  height: 800px;
 }
 
-/* the jumbotron quotes centered */
-.jumbotron .header {
-  width: inherit;
-  height: inherit;
-  position: absolute;
-  top: 40%;
-  left:5%;
-  right: 5%;
-  bottom: 40%;
-  color: #EDF2F0;
+.jumbotron .container {
+  padding-right: 0;
+  padding-left: 0;
 }
 
-.slider {
- position: relative; 
- overflow: hidden;
-}
-
-.slider li {
-  list-style: none;
-}
-
-.slider ul li {
-  float: left; 
-  height: 500px;
-}
-
-.jumbotron .unslider-nav {
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 20px;
-}
-
-.jumbotron .unslider-nav ol li {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  margin: 0 4px;
-  text-indent: -999em;
-  border: 2px solid #fff;
-  border-radius: 50%;
-  cursor: pointer;
-}
 
 /* the button style */
 .btn {
-  margin-top: 30px;
-  background-color: #444;
-  padding: 15px 25px;
-  color:#fff;
-  border: none;
-  font-weight: 300;
-  font-size: 1em;
+  padding: 15px 30px;
+  border-radius: 5px;
+ background-color:#6B2288;
+	color: #fff;
+  letter-spacing: 1px;
+  border: transparent;
   text-transform: uppercase;
   -moz-transition: ease 0.4s;
+  transition: ease 0.4s;
+  margin: 0 auto;
+  text-align: center;
 }
 
 /* hover style of the button */
 .btn:focus, .btn:hover {
-  background-color: #444;
-  color: #fff;
+  background-color: #b4d560;
+	color: #444;
   border: none;
-  padding: 20px 35px;
   transition: ease 0.4s;
 }
 
+.spacer {
+  height: 80px;
+  width: 100%;
+}
+
+.section1 .container, .section3 .container,  .section5 .container, .section6 .container, .section7 .container, .section9 .container, footer{
+	padding-top: 120px;
+	padding-bottom: 120px;
+}
+
+.section2 .container, .section4 .container, .section8 .container  {
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+
+form input, form .box {
+  color: #fff;
+}
+
+
+
+/* Use the following CSS code if you want to have a class per icon */
+.list-why { padding-left:0; list-style:none;float: left; text-align: left; }
+.list-why li { line-height: 1.7; font-size: 16px; padding-top: 10px; padding-bottom: 10px; }
+.list-why li:before {    
+    font-family: 'FontAwesome';
+    content: '\f046';
+    color: #64B544;
+    padding-right: 10px;
+}
+.list-why li:nth-child(1) {
+	padding-top: 0;
+}
+.list-why li:nth-child(4) {
+	padding-bottom: 40px;
+}
 
 /* //////////////////////////// SECTION 1 //////////////////////////////////// */
 
-
-/* making the container full width  */
-.section1 .container {
-  margin-top: -30px;
-}
-
-/* top margin for the header  */
-.section1 h2, .section3 h2 {
-  margin-top: -10px;
-}
-
-
-
-/* the space for the left column */
-.section1 .left-col .col-md-6   {
-  padding-top: 3%;
-  padding-left: 3%;
-  padding-right: 3%;
-  padding-bottom: 3%;
-
-}
-
-/* delete space for full width and height of the img */
-.section1 .right-col .col-md-6, .section3 .right-col .col-md-6 { 
-  margin-top: 0;
-  padding-right:0;
-  padding-left: 0;
-}
-
-.section1 .right-col {
-  height: 100%;
-}
-
-.section1 .right-col .col-md-6 {
-  height: 100%;
-  max-width: 100%;
-  position: relative;
-  display: inline-block;  
-
-}
-
-.section1 .inner {
-   position: absolute;    
-    height: 100%;
-    text-align: center;    
-    width: 100%;
-    vertical-align: middle;
-    top: calc(50% - 160px);
-    
-}
-
-.section1 .inner:before{
-  content: '';
-   display: inline-block;
-   height: 100%;
-   vertical-align: middle;
-}
-
-.section1 .right-col h3 {
-  font-size: 50px;
- display: inline-block;
- color: #0F0F0F;
- margin-bottom: 0;
- margin-top: 0;
- line-height: 1.3;
-
- }
-
- #reverse {
-  animation-direction: reverse;
-  -webkit-animation-direction: reverse;
-  -moz-animation-direction: reverse;
-  -o-animation-direction: reverse;
-}
-
-.section1-battle{
-    background:  url(images/section1/battle.svg) no-repeat;
-  background-size: 150px 75px;
-  position: absolute;
-  width: 150px;
-  height: 75px;
-  text-align: center;
-  left: 40%;
-
-}
-
-
-/* and make the img full width to fill the column */
-.section1 img{
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-
-
-
-/* chopo chicken logo size in section1 */
-.section1 .section1-logo img {
-  width: inherit; 
-  height: 90px;
-  margin: 0 auto;
-
-}
-
-/* the emojis */
-.section1 .emoji-punch img {
-  width: 30px;
-  height: 27px;
-  display: inline-block;
-  position: relative;
-}
-
-/* align the text to justify */
-.section1 p, .section3 p {
-  text-align: justify;
  
+.line-h3 {
+  position: relative;
+  display: inline-block;
+}
+
+
+h3 > .line-h3:before, h3 > .line-h3:after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    border-bottom: 1px solid #b4d560;
+    width: 70%; /* half of limiter*/
+    margin: 0 20px;
+}
+h3 > .line-h3:before{
+    right: 100%;
+}
+h3 > .line-h3:after{
+    left: 100%;
+}
+
+.section1 img {
+	margin: 0 auto;
 }
 
 
 
 /* //////////////////////////// SECTION 2 //////////////////////////////////// */
 
-
-/* styling the row with bg, the text color and spacing  */
-.section2 .row {
- color: #EDF2F0;
- background-color: #333333; 
- padding: 60px 80px;
+.section2 {
+  color: #b4d560;
+  background: url(images/section2/section2-bg-lg.jpg);
+  background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
 }
 
-/* the title for section2 */
 .section2 h2 {
-  font-size: 2em;
-  font-weight: 800;
+	margin-bottom: 40px !important;
+}
+
+.section2 .small {
+	color: #fff;
+	font-size: 16px;
+	margin-bottom: 30px;
+}
+
+.section2 .small:nth-child(2){
+	margin-bottom: 10px;
+}
+
+.section2 .small:nth-child(3){
+	font-style: italic;
+}
+
+.section2 #calculator-example {
+	margin-bottom: 40px;
+	font-style: italic;
+	font-size: 14px;
+}
+
+form p {
+  font-size: 1.2em;
+  font-weight: 700;
   text-transform: uppercase;
-  margin-bottom: 1%;
-}
-
-/* the emoji */
-.icon-heart .glyphicon {
+  letter-spacing: 2px;
   color: #fff;
-  animation-name: color_change;
-  animation-duration: 1s;
-  animation-iteration-count: normal;
-  animation-direction: normal;
-  -webkit-animation-direction: normal;
-  -moz-animation-direction: normal;
-  -ms-animation-direction: normal;
-  -o-animation-direction: normal;
-  -webkit-animation: color_change 0.5s infinite alternate-reverse;
-  -moz-animation: color_change 0.5s infinite alternate-reverse;
-  -ms-animation: color_change 0.5s infinite alternate-reverse;
-  -o-animation: color_change 0.5s infinite alternate-reverse;
-  animation: color_change 0.5s infinite alternate-reverse;
-  transition: ease 0.5s all;
 }
 
-@-webkit-keyframes color_change {
-  from { color: #555;  }
-  to { color: #fff; }
-}
-@-moz-keyframes color_change {
-from {color: #555;  }
-  to { color: #fff; }
+
+
+form input, form .box {
+   background-color: rgba(222,222,222,0);
+  font-size: 1.4em;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #fff;
 }
 
-@-ms-keyframes color_change {
-from {color: #555;  }
-  to { color: #fff; }
-}
-@-o-keyframes color_change {
-from { color: #555;  }
-  to { color: #fff; }
-}
-@keyframes color_change {
-from { color: #555;  }
-  to { color: #fff; }
+form .total {
+  font-family: 'Montserrat';
+  font-size: 3em;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  border-color: transparent;
+  background-color: rgba(222,222,222,0);
+  margin-top: -15px;
+  text-align: center;
 }
 
+form .btn-calculator {
+  padding: 15px 30px;
+  border-radius: 5px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: #b7ff00;
+  color: #444;
+  letter-spacing: 1px;
+  border: transparent;
+   -moz-transition: ease 0.4s;
+   transition: ease 0.4s;
+  
+}
+
+form .btn-calculator:hover, form .btn-calculator:focus {
+	color:#b7ff00;
+	background-color: #444;
+	 -moz-transition: ease 0.4s;
+	 transition: ease 0.4s;
+}
 
 /* //////////////////////////// SECTION 3 //////////////////////////////////// */
 
-
-/* the emoji */
-.section3 .emoji-love img {
-  width: 29px;
-  height: 30px;
-  margin-top: -10px;
-  display: inline-block;
-  position: relative;
+.section3 .lead-p {
+	margin-bottom: 40px;
 }
 
-/* the space for the pushed right column  */
-.section3 .left-col .col-md-6 {
-  padding-top: 5%;
-  padding-left: 3%;
-  padding-right: 3%;
-  padding-bottom: 5%;
+.section3 h3 {
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
-/* and make the img full width to fill the column */
-.section3 .right-col img{
-  width: 100%;
+.section3 .condicoes {
+	text-align: center;
+	font-size: 13px;
+	line-height: 1.3;
 }
 
+
+#btn-reserva, .btn-success.disabled {
+	background-color:#6B2288;
+	color: #fff;
+	padding: 15px 30px;
+	font-size: 1.2em;
+	font-weight:300;
+	float: left;
+} 
+
+#btn-reserva:hover, #btn-reserva:focus, .btn-success.disabled:focus, .btn-success.disabled:hover {
+	background-color: #b4d560;
+	color: #444;
+}
 
 /* //////////////////////////// SECTION 4 //////////////////////////////////// */
 
-
-/* change bg color of the menu section */
 .section4 {
-  background-color: #EAEAEA;
-}
-
-/* add more top and bottom space */
-.section4 .container {
-  padding-top: 4%;
-  padding-bottom: 8%;
-}
-
-/* erase the top margin of the book icon */
-.section4 i {
-  margin-top: 0;
-}
-
-/* the menu title */
-.section4 h3 {
-  margin-bottom: 20px;
-  font-size: 1em;
-  text-transform: uppercase;
-  font-weight: 800;
-}
-
-/* this is the top and bottom line on the tabs */
-.section4 hr.line {
-  height: 1px; 
-  background-color: #000;
-}
-
-/* and this line is the one that goes inside the menu that separates the items */
-.section4 hr.line2 {
-  width: 80%;
-  background-color: #848484;
-}
-
-/* the item bold title */
-.section4 h4 {
-  font-size: 1em;
-  text-transform: uppercase;
-  margin-top: 20px;
-}
-/* the intro menu text */
-.section4 .text-menu {
-  font-size: 18px;
-  line-height: 1.2;
-}
-
-/* this is the space from the tabs and the menu */
-.section4 .tab-content > .active {
-margin-top: 50px;
-text-align: center;
-}
-
-/* the tab text should be black */
-.nav-justified > li > a {
-  color: #000;
-}
-
-/* erase the bg hover style and make it bold when hover */
-.nav-justified > li > a:hover, .nav-justified > li > a:focus {
-  background-color: transparent;
-  font-weight: 800;
-}
-
-/* and when its active, leave it bold */
-.section4 .nav-pills > li.active > a {
-  background-color: transparent;
-  color: #000;
-  font-weight: 800;
-}
-
-/* right side of the menu */
-.section4 .right-col {
-  padding-top: 20.4%;
-  padding-right: 5%;
-  padding-left: 5%;
-  padding-bottom: 20.4%;
-  background-color: #fff;
-  text-align: justify;
+  background-color: #00FF00;
+  background: url(images/section4/bg-cartao.jpg);
+  background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
 }
 
 
-/* the left side of the menu, to allow the icon and text */
-.section4 .col-sm-6 {
-  padding-right: 0;
-  padding-left: 0;
-  display: block;
-  float: left;
-  position: relative;
-}
-
-.section4 .left-col {
-   background-color: #0F0F0F;
-}
-
-/* the title on the left side */
-.section4 .left-col h2  {
-  position: absolute;
-  top: 49%;
-  color: #fff;
-  font-size: 1em;
-  width: 100%;
-  display: block;
-
-}
-
-.section4 .right-col h3  {
-  font-size: 22px;
-  display: block;
-  margin: 0;
-}
-
-/* the pollo icon style */
-.section4 .left-col .icon-pollo {
-  background:  url(images/section4/pollo.svg) no-repeat;
-  background-size: 50px 50px;
-  position: absolute;
-  top: 43%;
-  width: 50px;
-  margin: 0 auto; 
-  height: 50px;
-  right: 45.5%;
-}
-
-/* the sides icon style */
-.section4 .left-col .icon-sides {
-  background:  url(images/section4/sides.svg) no-repeat;
-  background-size: 50px 50px;
-  position: absolute;
-  top: 43.7%;
-  width: 50px;
-  margin: 0 auto; 
-  height: 50px;
-  right: 45.5%;
-}
-
-/* the beverages icon style */
-.section4 .left-col .icon-beverages {
-  background:  url(images/section4/beverages.svg) no-repeat;
-  background-size: 27px 50px;
-  position: absolute;
-  top: 42.3%;
-  width: 40px;
-  margin: 0 auto; 
-  height: 50px;
-  right: 45.5%;
-}
-
-/* the sauces icon style */
-.section4 .left-col .icon-sauces {
-  background:  url(images/section4/sauces.svg) no-repeat;
-  background-size: 40px 40px;
-  position: absolute;
-  top: 44%;
-  width: 40px;
-  margin: 0 auto; 
-  height: 40px;
-  right: 46%;
-}
-
-/* the combos icon style */
-.section4 .left-col .icon-combos {
-  background:  url(images/section4/combos.svg) no-repeat;
-  background-size: 50px 50px;
-  position: absolute;
-  top: 42.5%;
-  width: 50px;
-  margin: 0 auto; 
-  height: 50px;
-  right: 45.5%;
-}
-
-.section4 .right-col .link-menu {
-  text-decoration: none;
-  color: #0F0F0F;
-
-}
-
-.section4 .right-col .arrow {
-  display: inline-block;
-   -webkit-animation-duration: 5s;
-   -moz-animation-duration: 5s;
-   -ms-animation-duration: 5s;
-   -o-animation-duration: 5s;
-   animation-duration: 5s;
-}
-
-.section4 .right-col .icon-bowl {
-  background:  url(images/section4/icon-bowl.svg) no-repeat;
-  background-size: 35px 35px;
-  color: #0F0F0F;
-  width: 35px;
-  margin: 0 auto; 
-  height: 35px;
-  float: right !important;
-  text-align: right;
-}
-
-.section4 .right-col .icon-combo {
-  background:  url(images/section4/icon-combo.svg) no-repeat;
-  background-size: 45px 45px;
-  color: #0F0F0F;
-  width: 45px;
-  margin: 0 auto; 
-  height: 45px;
-  float: right !important;
-  text-align: right;
-  margin-top: -13px;
-}
-
-.section4 .right-col .icon-amazebowl {
-  background:  url(images/section4/icon-amazebowl.svg) no-repeat;
-  background-size: 45px 45px;
-  color: #0F0F0F;
-  width: 45px;
-  margin: 0 auto; 
-  height: 45px;
-  float: right !important;
-  text-align: right;
-  margin-top: -15px;
-}
-
-.section4 .left-col .icon-amazebowl {
-background:  url(images/section4/icon-amazebowl.svg) no-repeat;
-  background-size: 50px 50px;
-  color: #fff !important;
-  position: absolute;
-  top: 42.5%;
-  width: 50px;
-  margin: 0 auto; 
-  height: 50px;
-  right: 45.5%;
-}
-
-.section4 .right-col .icon-sides {
-  background:  url(images/section4/icon-sides.svg) no-repeat;
-  color: #0F0F0F;
-  width: 50px;
-  margin: 0 auto; 
-  height: 35px;
-  float: right !important;
-  text-align: right;
-}
-
-.section4 .right-col .icon-sauces {
-  background:  url(images/section4/icon-sauces.svg) no-repeat;
-  color: #0F0F0F;
-  width: 35px;
-  margin: 0 auto; 
-  height: 35px;
-  float: right !important;
-  text-align: right;
-  margin-top: -8px;
-}
-
-.section4 .right-col .icon-extras {
-  background:  url(images/section4/icon-extras.svg) no-repeat;
-  color: #0F0F0F;
-  width: 60px;
-  margin: 0 auto; 
-  height: 35px;
-  float: right !important;
-  text-align: right;
-  margin-top: -5px;
-}
 
 
-.section4 .right-col .number {
-  font-size: 12px;
-  font-weight: 700;
-  border-radius: 50%;
-  border: 2px solid #0F0F0F;
-  padding: 1px 5px;
-  display: inline-block;
-  vertical-align: middle;
-  margin-top: -4px;
-}
 /* //////////////////////////// SECTION 5 //////////////////////////////////// */
-  
 
-/* give the container less space */
 .section5 .container {
-  padding-top: 2%;
-  padding-bottom: 2%;
+	padding-bottom: 0 !important;
 }
 
-/* the bold text under the street */
-.section5 .container small {
-  font-size: 65%;
-  text-transform: uppercase;
+.section5 .lead-p{
+	margin-bottom: 0;
+}
+.section5 p {
+	margin-bottom: 40px;
+}
+.polarys {
+	margin-bottom: 10px;
 }
 
-/* the icons space */
-.section5 i {
-  margin-top: 20px;
+.section5 h3 {
+	margin-bottom: 20px;
 }
 
+.section5 .row:nth-child(4) {
+	text-align: left;
+}
+
+.section5 #buttons-row {
+	
+	float: left;
+}
+
+
+ #my-button, #my-button2, #my-button3 {
+	text-decoration: none;
+	font-size: 0.9em;
+	font-weight:300;
+	color: #444;
+	background-color: #b4d560;
+	transition: ease 0.4s;
+	padding: 10px 15px;
+}
+
+ #my-button:hover, #my-button:focus, #my-button2:hover, #my-button2:focus, #my-button3:hover, #my-button3:focus {
+  background-color: #444;
+  color: #b4d560;
+  border: none;
+  transition: ease 0.4s;
+}
+
+#my-button2{
+	margin:0 20px;
+}
+  
+ 
+  
+#element_to_pop_up a, #element_to_pop_up2 a, #element_to_pop_up3 a, #element_to_pop_up a:hover, #element_to_pop_up a:focus, #element_to_pop_up2 a:hover, #element_to_pop_up2 a:focus, #element_to_pop_up3 a:hover, #element_to_pop_up3 a:focus {
+	text-decoration: none;
+	color:#202221;
+} 
+  
+  
+#element_to_pop_up, #element_to_pop_up2, #element_to_pop_up3  { 
+    background-color:#fff;
+    border-radius:15px;
+    display:none; 
+    padding:50px;
+    min-width:200px;
+    min-height: 180px;
+	max-width: 700px;
+    margin: 0 auto;
+    left: 3%;
+	right: 6%;
+	top:5%;
+	
+}
+
+
+
+#element_to_pop_up p, #element_to_pop_up2 p, #element_to_pop_up3 p {
+  text-align: justify;
+   padding-right: 0;
+}
+
+
+.b-close, .b-close2{
+  font-family: 'Montserrat';
+    cursor:pointer;
+    position:absolute;
+    right:-20px;
+    top:-25px;
+	background-color: #b4d560;
+	border-radius: 50%;
+	padding: 8px 20px;
+    font-size: 30px;
+	font-weight: 700;
+	text-decoration: none; 
+	color: #202221;
+	z-index: 99999999;
+}
+
+
+.section5 ul li {
+	font-size: 16px;
+	letter-spacing: 2px;
+}
+
+.section5 ul li:nth-child(4) {
+	margin-bottom: 20px;
+}
+
+
+/* //////////////////////////// SECTION 7 //////////////////////////////////// */
+
+.section7 i {
+	font-size: 2em;
+	color: #b4d560;
+	font-weight: 300;
+}
+
+/* carousel */
+#quote-carousel 
+{
+  padding: 0 10px;
+  margin-top: 5px;
+}
+
+/* Control buttons  */
+#quote-carousel .carousel-control
+{
+  background: none;
+  color: #b4d560;
+  font-size: 2.3em;
+  text-shadow: none;
+  top: 20px;
+}
+/* Previous button  */
+#quote-carousel .carousel-control.left 
+{
+  left: -25%;
+}
+/* Next button  */
+#quote-carousel .carousel-control.right 
+{
+  right: -25% !important;
+}
+/* Changes the position of the indicators */
+#quote-carousel .carousel-indicators 
+{
+  right: 50%;
+  top: auto;
+  bottom: -45px;
+  margin-right: -19px;
+ 
+}
+/* Changes the color of the indicators */
+#quote-carousel .carousel-indicators li 
+{
+  margin-left: 5px;
+  margin-right: 5px;
+  background:  #b4d560;
+  border: none;
+}
+#quote-carousel .carousel-indicators .active 
+{
+  background: #6B2288;
+}
+
+/* End carousel */
+
+.item blockquote {
+    border-left: none; 
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.item blockquote p {
+	  font-size: 17.5px;
+}
+
+.item blockquote img {
+    margin-bottom: 10px;
+}
+
+.item blockquote small {
+	font-family: 'Montserrat';
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: 700;
+	color: #202221;
+}
+
+.section7 .container {
+	padding-bottom: 190px !important;
+}
 
 /* //////////////////////////// SECTION 8 //////////////////////////////////// */
-
-
-/* change the bg color */
 .section8 {
-  background-color: #EAEAEA;
+	background: #fff url(images/section8/bg-section8.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
 }
 
-/* less space for the container */
-.section8 .container {
-  padding-top: 2%;
-  padding-bottom: 2%;
+.section8 a {
+	text-decoration: none;
+	color: #fff;
+	  transition: ease 0.4s;
 }
 
-/* the icons */
-.section8 .container .fa{
-  margin-right: 2%;
-  margin-left: 2%;
-  font-size: 2.5em;
-  color: #0F0F0F;
+.section8 a:hover, .section8 a:focus {
+	color: #b4d560;
+	  transition: ease 0.4s;
 }
 
+.section8 .social-info {
+	font-weight: 700;
+	font-size: 25px !important;
+}
 
 /* //////////////////////////// SECTION 9 //////////////////////////////////// */
-
-
-/* change this bg color as well */
-.section9 {
-  background-color: #0F0F0F;
-}
-
-/* the container space and color */
-.section9 .container {
-  width: 90%;
-  padding-top: 4%;
-  padding-bottom: 4%;
- color: #484848;
-}
-
-/* Chopo`s logo  */
-.section9 .container img {
-  margin-left: auto;
-  margin-right: auto;
-  width: inherit; 
-  height: 100px;
-  margin-bottom: 20px;
-}
-
-/* the hover state for the console icon */
-.section9 .footer > small > .glyphicon-console:hover {
-  color: #00dd00;
-}
-
-/* the hover state for the heart icon */
-.section9 .footer > small > .glyphicon-heart:hover {
-  color: #f20000;
+.section9 .col-sm-8 .lead-p {
+	font-size: 1.3em;
+	margin-bottom: 40px;
 }
 
 
-/* //////////////////////////// FORM SUCCESS //////////////////////////////////// */
-
-.form-container { 
-  margin-top: 45px; 
+.section9 label {
+	letter-spacing: 2px;
+}
+.input-group {
+	
+	width: 100%;
+	margin-bottom: 20px;
+}
+#contact-form label {
+	float: left;
 }
 
-.form-container .row {
-  padding: 4%; 
+.section9 .form-control {
+	font-size: 12px;
 }
 
-.form-h2 {
-  color: #0F0F0F;
+.form-control:focus {
+    border-color: #b4d560;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px rgba(180, 213, 96, 0.5);
+    transition: ease 0.4s all;
+    }
+/* //////////////////////////// FOOTER //////////////////////////////////// */
+footer {
+	background-color: #202221;
 }
+
+
+footer ul {
+	margin-top: 60px;
+	margin-bottom: 60px;
+	padding-left: 0;
+}
+
+footer a {
+	color: #b4d560;
+	text-decoration: none;
+	padding-bottom: 10px;
+}
+
+footer a:hover, footer a:focus {
+	color: #fff;
+	text-decoration: none;
+}
+
+footer ul li {
+	text-decoration: none;
+	display: inline-block;
+	text-align: center;
+	padding-left: 20px;
+	padding-right: 20px;
+	color: #b4d560;
+	text-transform: uppercase;
+	font-size: 1em;
+	letter-spacing: 2px;
+}
+
+footer small {
+	color:#ccc;
+	letter-spacing: 1px;
+	margin-top: 80px;
+}
+
+footer small .fa-pencil:hover {
+	color: #DFFF8C;
+	position: relative;
+}
+
+footer small .fa-pencil[data-title]:hover:after{
+	  content: attr(data-title);
+	  padding: 10px;
+	  background-color: #DFFF8C; 
+	  color: #202221;
+	  font-family: 'Raleway', sans-serif;
+	  font-weight: 300;
+	  font-size: 10px;
+	  letter-spacing: 0.12em;
+	  position: absolute;
+	  left: 50%;
+	  top: 175%;
+	  white-space: nowrap;
+	  z-index: 20;
+	   -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+} 
+
+
+footer small .fa-code:hover {
+	color: #6B2288;
+	position: relative;
+}
+
+footer small .fa-code[data-title]:hover:after{
+	content: attr(data-title);
+	padding: 10px;
+	background-color: #6B2288; 
+	color: #fff;
+	font-family: 'Raleway', Helvetica;
+	font-weight: 300;
+	font-size: 10px;
+	letter-spacing: 0.12em;
+	position: absolute;
+	left: 50%;
+	top: 175%;
+	white-space: nowrap;
+	z-index: 20;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+  	border-radius: 3px;
+} 
+
+footer small .fa-heart-o:hover {
+	color: #ff0000;
+	position: relative;
+}
+
+footer small .fa-heart-o[data-title]:hover:after{
+  content: attr(data-title);
+  padding: 10px;
+  background-color: #ff0000; 
+  color: #fff;
+  font-family: 'Raleway', Helvetica;
+  font-weight: 300;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  position: absolute;
+  left: 50%;
+  top: 175%;
+  white-space: nowrap;
+  z-index: 20;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+} 
 
 /*==========  Mobile First Method  ==========*/
 
 /* Custom, iPhone Retina */ 
 
- @media only screen and (min-width : 320px) and (max-width: 767px), (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5) {
- .coming-soon {max-width: 600px;  max-height: 900px;  position: absolute;   top: 0%;   left:5%;   right: 5%;   bottom: 5%;}   
-h2 {line-height: 1.1;}
-.jumbotron {  background: #505050 url(images/header/ios-bg.jpg) no-repeat; background-size: cover;}
+ @media only screen and (min-width : 320px) and (max-width: 767px), (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5) {  
+h1 {font-size: 2.5em;}
+ h2 {line-height: 1.1; font-size: 1.2em !important; }
+ h3 {margin-bottom: 20px; margin-top: 40px; font-size: 1.5em;}
+ p {text-align: justify; line-height: 1.5;}
+ .col-sm-6, .col-sm-8, .col-sm-12 {padding-left: 0; padding-right: 0;}
+ .lead-p {font-size: 1.4em; text-align: justify; line-height: 1.5;}
+ .row {margin-left: 0 !important; margin-right: 0 !important;}
+.jumbotron {
+  background: url(images/header/banner-xs.jpg);
+ background-size: cover;
+background-repeat: no-repeat;
+background-position: top center;
+  padding: 0; 
+  margin-bottom: 0;
+  width: 100%;
+  height: 600px;
+}
 .jumbotron .btn {margin-top: 10px;}
 .jumbotron br {display: none;}
 .jumbotron .header { width: inherit; height: inherit; position: absolute; top: 25%; left:5%; right: 5%; bottom: 25%;}
 .jumbotron #carousel-h1 h1 { font-size: 2.5em; }
-.jumbotron #carousel-h1 .h1-peru {font-size: 3.8em;}
+.jumbotron p {font-size: 1em; font-weight: 700; margin-bottom: 10px;}
+ .carousel {min-height: 255px;}
+.jumbotron .p-lucro { margin-top: -15px; text-align: center;}
+form .btn-calculator {margin-top: 0 !important; padding: 15px 30px; font-size: 14px !important;} form input, form .box {font-size: 1em;} form .btn-calculator:nth-child(1) {margin-top: -30px;}
+form .total {margin-top: -20px !important;}
 #menubar {padding: 10px 40px; height: 40px; }
 .navbar-collapse {background-color: #fff; border-bottom: 1px solid #eee;}
-.navbar-brand, #logo {  width: 90px;  height: 57px; padding: 0;  margin-left: -10px;}
+.navbar-brand, #logo {  width: 190px;  height: 57px; padding: 0;}
+#myCarousel .container { padding: 100px 15px 10px 15px !important;}
+#myCarousel h2 { font-size: 1.7em !important; margin-bottom: 0 !important; padding-bottom: 0 !important; }
+.section1 .col-sm-6 {padding-left: 0; padding-right: 0;}
+.list-why { font-size: 1.3em !important;  padding-left: 0 !important;} .list-why li {text-align: justify; padding-bottom: 20px;}
 .section1 .section1-logo img {  width: inherit;   height: 75px;}
+.section2 {  color: #b4d560;  background: url(images/section2/section2-bg-xs.jpg);  background-size: cover;	background-repeat: no-repeat;	background-position: center center;}
 
-
-.section1 .right-col .col-md-6 {
-  height: 100%;
-  max-width: 100%;
-  position: relative;
-  display: inline-block;  
-  top: 5px;
-}
-
-.section1 .inner {
-   position: absolute;    
-    height: 100%;
-    text-align: center;    
-    width: 100%;
-    vertical-align: middle;
-    
-}
-
-.section1 .inner:before{
-  content: '';
-   display: inline-block;
-   height: 100%;
-
-}
-
-.section1 .right-col h3 {
-  font-size: 20px;
- display: inline-block;
- color: #0F0F0F;
- margin-bottom: 0;
- margin-top: 0;
- line-height: 1.3;
- position: absolute;
-
- }
-
-
-.section1-battle{
-    background:  url(images/section1/battle.svg) no-repeat;
-  background-size: 75px 50px;
-  position: absolute;
-  width: 75px;
-  height: 50px;
-  text-align: center;
-
-}
-
-
-/* and make the img full width to fill the column */
-.section1 img{
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-.section1 .container .left-col, .section2 .container, .section3 .container .left-col, .section4 .container, .section5 .container .row .reservation { padding-right: 15px; padding-left: 15px; margin-right: auto; margin-left: auto;} 
-.section1 .container .left-col, .section2 .container .row, .section3 .left-col .col-md-6, .section4 .container, .section5 .container, .section7 .container, .section8 .container, .section9 .container {padding-top: 60px; padding-bottom: 60px; }
-.section1 .emoji-punch {  width: 30px;  height: 27px;  display: inline-block;  position: relative;}
-.section1 br { display: none;}
-.section2 .container .row {padding-right: 15px; padding-left: 15px;}
-.section2 h2 { margin-bottom: 4%;}
-.section4 .text-menu { font-size: 15px; line-height: 1.2; }
-.section4 .container {  padding-top: 80px; padding-bottom: 80px;}
-.section4 .right-col {padding: 10%; background-color: transparent; }
-.section4 #Chicken .col-sm-6 {color: #0F0F0F; background-color: #fff;}
-.section4 #Bowls .col-sm-6 {color: #0F0F0F; background-color: #fff;}
-.section4 #Sides .col-sm-6 {color: #0F0F0F; background-color: #fff;}
-.section4 #Sauces .col-sm-6 {color: #0F0F0F; background-color: #fff;}
-.section4 .nav-justified > li > a {padding-bottom: 0;}
-.section4 .tab-content > .tab-pane { margin-top: 20px; }
-.section4 .line { margin-top: 5px; margin-bottom: 5px;}
-.section4 .right-col h3 { font-size: 15px; }
-.section4 .right-col .icon-bowl, .section4 .right-col .icon-combo, .section4 .right-col .icon-amazebowl, .section4 .right-col .icon-sides, .section4 .right-col .icon-sauces { background-size: 25px; width: 25px; height: 25px;}
-.section4 .right-col .icon-combo {background-size: 30px; width: 30px; height: 30px;}
-.section4 .right-col .icon-amazebowl {background-size: 25px; height: 35px; width: 30px;}
-.section4 .right-col .icon-sides {background-size: 35px; height: 30px; width: 45px;}
-.section4 .right-col .icon-extras {background-size: 40px; height: 30px; width: 40px;}
-.section4 .right-col i{font-size: 14px !important; }
-.section4 .right-col p { font-size: 15px; text-align: left;}
-.section4 hr.line2, .section4 #Chicken hr.line2 {border-top: 1px solid #ddd; }
-.section6 .container iframe {width: 93%;}
-.section7 .btn { margin: 0 auto; text-align: center; float: none; margin-top: 4%; }
-.section9 .container .left { margin:0 auto; text-align: center; float: none; margin-top: 5%; width: 100%; }
-.section9 .container .right {margin:0 auto; text-align: center; float: none; margin-top: 0; width: 100%;}
+.section2 h2 {margin-bottom:-10px !important; font-size: 1.7em !important;}
+.section2 #calculator-example {	margin-bottom: 20px; text-align: center !important;}
+#btn-reserva, .btn-success.disabled {float: none;}
+.container {padding-left: 30px;padding-right: 30px;}
+ h1 > .line-h1:before, h1 > .line-h1:after{content: '';position: absolute;top: 50%;border-bottom: 2px solid #B3CF64;width: 20%; margin: 0 20px;}
+ h1 > .line-h1:before{right: 100%;} h1 > .line-h1:after{left: 100%;}
+ form p {font-size: 1em !important;} .p-lucro2 {text-align: center;}
+ form .box { width: 150px; margin-left: 0 !important; }
+ form .total { margin: 0 auto; font-size: 2.5em; width: 90%; }
+#element_to_pop_up, #element_to_pop_up2, #element_to_pop_up3 {left:5% !important;}
+.section3 .condicoes {font-size: 1em; line-height: 1.7em !important; margin-bottom:20px;}
+.section3 h3 {margin-top: 5px;}
+.section3 .row:nth-child(2) {margin-bottom: 40px;}
+.section4 {  background-color: #00FF00;  background: url(images/section4/bg-cartao-sm.jpg);  background-size: cover;	background-repeat: no-repeat;	background-position: center right;}
+.section4 h3 {margin-top: 5px; line-height: 1.4; text-align: center !important; margin-bottom: 20px !important;}
+.section4 .col-sm-4 {padding-left: 0; padding-right: 0;}
+.section5 .container {padding-bottom: 0;}
+.section5 .col-sm-6 {padding-left: 0; padding-right: 0;}
+.section5 .lead-p {margin-bottom: 40px;}
+.section5 .img-responsive {margin: auto;} .section5 .img-responsive:nth-child(1) {margin-bottom: 20px;} 
+.section5 h3 {text-align: center !important; margin-top: 20px; padding-bottom: 10px !important;}
+.section5 p {margin-bottom: 20px;}
+#element_to_pop_up, #element_to_pop_up2, #element_to_pop_up3 {padding: 25px;}
+#my-button2, #my-button3  {margin-top: 10px;} #my-button2 {margin-left: 0;}
+#my-button, #my-button2, #my-button3 {padding: 15px 30px; font-size: 14px; float: left;}
+.section7 .container {padding-bottom: 140px !important;}
+.section7 .item blockquote {padding-left: 0; padding-right: 0;}
+.item blockquote p {font-size: 16px;}
+.item blockquote small {text-align: left;}
+#quote-carousel {padding-left: 0; padding-right: 0;}
+#quote-carousel .carousel-indicators {bottom: -20px;}
+.section7 .col-sm-8, .col-sm-12 {padding-left: 0; padding-right: 0;}
+.section8 i {padding-left: 0 !important;}
+.section8 {	background: #fff url(images/section8/bg-section8-sm.jpg);	background-size: cover;	background-repeat: no-repeat;	background-position: center center;}
+.section8 h3{margin-top: 0;}
+.section9 h3 {margin-top: 0; margin-bottom: 40px;}
+.section9 .lead-p {margin-bottom: 40px;}
+.section9 .col-sm-12, .section9 .col-sm-4, .col-sm-8, .col-sm-6, .col-sm-4 {padding-left: 0; padding-right: 0; margin-bottom: 20px;}
+.section9 #btn-reserva, .btn-success.disabled {font-size: 1em; margin-bottom: 40px; width: 100%;}
+footer ul {margin-bottom: 40px;}
+ footer ul li {padding-top: 5px; padding-bottom: 5px;}
+ footer small {line-height: 2em;}
 }
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) and (max-width: 991px) {
-  .coming-soon {width: 70%;  height: 80%;  position: absolute;   top: -20%;   left:5%;   right: 5%;   bottom: 10%;}   
-.jumbotron {  background: #505050 url(images/header/sm-bg.jpg) no-repeat; background-size: cover;}
-.jumbotron #carousel-h1 .h1-peru {font-size: 5em;}
-.navbar-brand, #logo { width: 119px; margin-left: -30px ;}
-#small { width: 140px; margin-left: -30px; background-size: 100px 30px; margin-top: 10px;}
-#bs-example-navbar-collapse-1 {margin-right: -30px;}
-.navbar-default .navbar-nav > li > a { font-size: 1em; padding-right: 8px; padding-left: 8px;}
-.section1 .left-col .col-md-6 {padding: 0;}
-.section1 .container .left-col, .section2 .container .row, .section3 .container .left-col, .section5 .container, .section9 .container {padding: 100px;}
-.section3 .container .left-col .col-md-6 > p {margin: 0; padding-bottom: 100px;}
-.section3 .left-col .col-md-6 {padding: 0;}
-.section4 .container {width: 95%; padding-top: 100px; padding-bottom: 100px;}
-.section4 .container .nav > li > a {padding: 0; }
-.section4 .col-sm-6 {width: 100%; margin-top: -20px;}
-.section4 .nav {padding-left: 40px;}
-.section4 .text-menu { font-size: 15px; line-height: 1.2; }
-.section4 .right-col { padding: 5%;}
-.section5 i {margin-top: 0; font-size: 24px;} .section5 p {margin-bottom: 0;} .section5 .fa-map-signs, .section5 .fa-envelope-o {margin-top: 20px;} 
-.section7 .container {padding-top: 100px; padding-bottom: 100px;}
-.section8 .container {padding: 50px; }
-.section8 .container .fa {font-size: 24px; padding-left: 20px; padding-right: 20px;}
-.section9 .container .left { margin:0 auto; text-align: center; float: none; margin-top: 5%; width: 100%; }
-.section9 .container .right {margin:0 auto; text-align: center; float: none; margin-top: 0; width: 100%;}
+#myCarousel h2 {margin-bottom: 40px !important;}
+#myCarousel .container {padding-top: 120px !important;}
+.jumbotron {  background: url(images/header/banner-sm.jpg); background-size: cover;background-repeat: no-repeat;background-position: center center;  padding: 0;   margin-bottom: 0;  width: 100%;  height: 565px;}
+.jumbotron form .btn-calculator:nth-child(1) {margin-top: 30px;}
+ .container {padding-left: 15px;padding-right: 15px;}
+ h1 > .line-h1:before, h1 > .line-h1:after{content: '';position: absolute;top: 50%;border-bottom: 2px solid #B3CF64;width: 20%; margin: 0 20px;}
+ h1 > .line-h1:before{right: 100%;} h1 > .line-h1:after{left: 100%;}
+ .lead-p {text-align: center;}
+ #quote-carousel .carousel-control.right {right: -7% !important;top: -25% !important;}
+  #quote-carousel .carousel-control.left {left: -2% !important;top: -25% !important;}
+  #quote-carousel .carousel-control.right, #quote-carousel .carousel-control.left {font-size: 1.4em;}
+   .carousel {min-height: 75px;}
+   .carousel-inner {margin-top: 20px;}
+   .section1 p, .section2 p {text-align: center;}
+   .section2 {  color: #b4d560;  background: url(images/section2/section2-bg-sm.jpg);  background-size: cover;	background-repeat: no-repeat;	background-position: center center;}
+   .section4 {  background-color: #00FF00;  background: url(images/section4/bg-cartao-sm.jpg);  background-size: cover;	background-repeat: no-repeat;	background-position: bottom left;}
+   .section4 .col-sm-4 a {float: none;}
+   .section4 #btn-reserva, .btn-success.disabled {margin-top: 0;}
+ #element_to_pop_up  h3, #element_to_pop_up2  h3, #element_to_pop_up3 h3 {padding-bottom: 10px !important;}
+   .section7 .container {padding-bottom: 120px !important;}
+   #my-button, #my-button2, #my-button3 {margin-top: 0;}
+   #my-button2 {margin-left: 45px !important; margin-right: 45px;}
+   #my-button3 {margin-left: 0 !important;}
+   #buttons-row {margin: auto !important; text-align: center;}
+   footer ul li {display: block;}
+   #btn-reserva, .btn-success.disabled {margin-top: 40px;}
+   .section7 .item blockquote { padding-left: 40px; padding-right: 40px;}
+   .section8 i {padding-left: 15px !important;}
+   form .btn-calculator:nth-child(1) {margin-top:10px;}
+  .section9 .col-sm-12, .section9 .col-sm-4, .col-sm-8, .col-sm-6, .col-sm-4 {padding-left: 15px; padding-right: 15px; margin-bottom: 20px;}
+   .section7 #btn-reserva, .btn-success.disabled {margin-bottom: 0; margin-top: 0;}
+   .section8 {	background: #fff url(images/section8/bg-section8-sm.jpg);	background-size: cover;	background-repeat: no-repeat;	background-position: center center;}
+   	.section9 .col-sm-6, .section9 .col-sm-6 .form-group {margin-bottom: 0px;}
+		.section9 .form-control {font-size: 12px;}
+		footer p {text-align: center !important;}
+}
+
+@media only screen and (min-width : 768px) and (max-width: 1020px){
+	.navbar-default .navbar-nav > li > a { font-size: 0.8em; padding-left: 10px; padding-right: 10px; letter-spacing: 1px;}
+	.navbar-brand, #logo {width: 149px; margin-top: 12px;margin-left:-15px;}
+	
+	
 }
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) and (max-width: 1199px){
-  .coming-soon {width: 60%;  height: 70%;  position: absolute;   top: -35%;   left:5%;   right: 5%;   bottom: 10%;}   
-  h2 { font-size: 2em; }
-  .section1 h2, .section3 h2 {margin-bottom: 15px;}
-  p {font-size: 1.2em;}
-.navbar-brand, #logo {  width: 119px; margin-left: -30px; }
-#small { width: 140px; margin-left: -30px; background-size: 100px 30px; margin-top: 10px;}
-.navbar-default .navbar-nav > li > a { font-size: 1.1em;}
-.jumbotron #carousel-h1 .h1-peru {font-size: 4em;}
-#carousel-h1 h1  {font-size: 3.5em;}
-.section1 .section1-logo img {  width: inherit;   height: 50px;}
-.section1 .left-col .col-md-6 {padding-top: 3%; padding-bottom: 2%;}
-.section3 .left-col .col-md-6 {padding-top: 3%; padding-bottom: 3%;}
-.nav-justified > li > a { padding-left: 5px; padding-right: 5px; }
-.nav-justified {margin-left: 30px;}
-.section4 .text-menu { font-size: 15px; line-height: 1.2; }
-.section4 p {  font-size: 1em;}
-.section4 #Bowls .left-col img {min-height: 680px;}
-.section4 #Sides .left-col img, .section4 #Sides .right-col {min-height: 615px;}
-.section4 .right-col {  padding-top: 4%; padding-bottom: 2.5%; min-height: 542px;}
-.section4 hr.line2 { margin-top: -2px; margin-bottom: -2px; }
-.section5 i {font-size: 20px; margin-top: 20px;}
-.section7 .container {width: 75%;}
-.section8 .container {padding-top: 30px; padding-bottom: 30px;}
-.section8 .container .fa {font-size: 20px;}
-.section9 .container .right, .section9 .container .left { margin-top: 14%; }
+  #element_to_pop_up, #element_to_pop_up2, #element_to_pop_up3 { max-width: 700px !important; padding: 50px !important;}
+ #element_to_pop_up  h3, #element_to_pop_up2  h3, #element_to_pop_up3 h3 {padding-bottom: 10px !important;}
+  #myCarousel h2 {margin-bottom: 40px !important;}
+#myCarousel .container {padding-top: 120px !important;}
+#btn-reserva, .btn-success.disabled { margin-top: 0 !important;}
+.jumbotron {  background: url(images/header/banner-sm.jpg); background-size: cover;background-repeat: no-repeat;background-position: top center;  padding: 0;   margin-bottom: 0;  width: 100%;  height: 750px;}
+.jumbotron form .btn-calculator:nth-child(1) {margin-top: 30px;}
+ .container {padding-left: 15px;padding-right: 15px;}
+ h1 > .line-h1:before, h1 > .line-h1:after{content: '';position: absolute;top: 50%;border-bottom: 2px solid #B3CF64;width: 20%; margin: 0 20px;}
+ h1 > .line-h1:before{right: 100%;} h1 > .line-h1:after{left: 100%;}
+ .lead-p {text-align: center;}
+ .section8 i {padding-left: 15px !important;}
+ 	footer p {text-align: center !important;}
+
+
+   .carousel {min-height: 1px;}
+   .carousel-inner {margin-top: 20px;}
+   .section1 p, .section2 p {text-align: center;}
+    .section2 {  color: #b4d560;  background: url(images/section2/section2-bg-lg.jpg);  background-size: cover;	background-repeat: no-repeat;	background-position: center center;}
+ .section4 {  background-color: #00FF00;  background: url(images/section4/bg-cartao.jpg);  background-size: cover;	background-repeat: no-repeat;	background-position: bottom center;}
+   .section4 .col-sm-4 a {float: none;}
+   .section4 h3 {margin-bottom: 0 !important;}
+   .section5 h3 {padding-bottom: 10px !important;}
+   .section7 .container {padding-bottom: 120px !important;}
+   .section7 .col-sm-8, .col-sm-4, .col-sm-6, .col-sm-12 { padding-left: 15px; padding-right: 15px;}
+   #my-button, #my-button2, #my-button3 {margin-top: 0;}
+   #my-button2 {margin-left: 45px !important; margin-right: 45px;}
+   #my-button3 {margin-left: 0 !important;}
+   #buttons-row {margin: auto !important; text-align: center;}
+   .section8 {	background: #fff url(images/section8/bg-section8.jpg);	background-size: cover;	background-repeat: no-repeat;	background-position: center center;}
+     .section9 .col-sm-12, .section9 .col-sm-4, .col-sm-8, .col-sm-6, .col-sm-4 {padding-left: 15px; padding-right: 15px; margin-bottom: 20px;}
+	  .section9 .col-sm-4 p {text-align: justify !important;}
+   footer ul li {display: block;}
+   #btn-reserva, .btn-success.disabled {margin-top: 40px;}
+   form .btn-calculator:nth-child(1) {margin-top:40px;}
+   	.section9 .col-sm-6, .section9 .col-sm-6 .form-group {margin-bottom: 0px;}
+	.section9 .form-control {font-size: 12px;}
+   
 }
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) and (max-width: 1399px){
-  .coming-soon {width: 40%;  height: 50%;  position: absolute;   top: -40%;   left:5%;   right: 5%;   bottom: 10%;} 
-  .jumbotron #carousel-h1 .h1-peru {font-size: 5em;}
-.section1 .section1-logo img {  width: inherit; height: 60px;}
-.section1 .left-col .col-md-6, .section2 .container .row, .section5 .container  {padding: 3%;}
-.section3 .container .left-col .col-md-6 {padding: 3%;}
-.section4 .container {padding-top: 8%;}
-.section4 #Bowls .left-col img {min-height: 722px;}
-.section4 .right-col { padding-top: 10%; padding-bottom: 10%;  min-height: 658px;  }
-.section4 hr.line2 { margin-top: 5px; margin-bottom: 5px; }
-.section7 .container, .section9 .container { padding-top: 5.5%; padding-bottom: 5.5%; }
-.section7 .container { width: 90%; }
-.section8 .container {padding-top: 3%; padding-bottom: 3%;}
-}
-
-@media only screen and (min-width : 1400px) and (max-width : 1600px){
-  .coming-soon {width: 40%;  height: 50%;  position: absolute;   top: -40%;   left:5%;   right: 5%;   bottom: 10%;} 
-#carousel-h1 h1 {font-size: 5em;}
-.jumbotron #carousel-h1 .h1-peru {font-size: 6em;}
-.section1 .left-col .col-md-6, .section3 .left-col .col-md-6 {padding-top: 5%; padding-bottom: 5%;}
-.section2 .row {padding: 4%;}
-.section4 .nav-pills > li > a {font-size: 1.2em;}
-.section4 h4 {font-size: 1.2em;}
-.section4 .text-menu {font-size: 14px;}
-.section4 .left-col {min-height: 658px;}
-.section4 #Sides .left-col {min-height: 822px !important;}
-.section4 #Sauces .left-col {min-height: 754px !important;}
-.section4 .left-col h2 {font-size: 2.5em; top:43%; min-height: 700px;}
-.section4 .right-col { padding-top: 10%; padding-bottom: 10%;  min-height: 658px;  }
-.section4 hr.line2 { margin-top: 5px; margin-bottom: 5px; }
-.section4 #Bowls .left-col img {min-height: 722px;}
-.section4 #Bowls .right-col {padding-top: 8%;}
-.section5 .row .fa {font-size: 18px;}
-.section5 .container {padding-top: 3%; padding-bottom: 3%;}
-.section8 .container {padding-top: 3%; padding-bottom: 3%;}
-.section8 .container .fa {font-size: 2.2em;}
+	.lead-p, p {text-align: center !important;}
+ .jumbotron {  background: url(images/header/banner-lg.jpg) !important; background-size: cover;background-repeat: no-repeat;background-position: center center;  padding: 0;   margin-bottom: 0;  width: 100%;  height: 700px;}
+.section2 p, .section3 p {text-align: center !important;}
+ .section4 h3 {margin-bottom: 0 !important;}
+ .section4 {  background-color: #00FF00;  background: url(images/section4/bg-cartao.jpg);  background-size: cover;	background-repeat: no-repeat;	background-position: bottom center;}
+ .section5 h3 {padding-bottom: 10px !important;}
+  .section7 .col-sm-8, .col-sm-6, .col-sm-12 { padding-left: 15px; padding-right: 15px;}
+   .carousel {min-height: 1px;}
+   #my-button2, #my-button3 {margin-top:0 !important;}
+    #my-button, #my-button2, #my-button3 {margin-top: 0;}
+   #my-button2 {margin-left: 45px !important; margin-right: 45px;}
+   #my-button3 {margin-left: 0 !important;}
+ #element_to_pop_up, #element_to_pop_up2, #element_to_pop_up3 { max-width: 700px !important; padding: 50px !important;}
+ #element_to_pop_up  h3, #element_to_pop_up2  h3, #element_to_pop_up3 h3 {padding-bottom: 10px !important;}
+   .section8 {	background: #fff url(images/section8/bg-section8.jpg);	background-size: cover;	background-repeat: no-repeat;	background-position: center center;}
+  .section9 .col-sm-12, .section9 .col-sm-4, .col-sm-8, .col-sm-6, .col-sm-4 {padding-left: 15px; padding-right: 15px; margin-bottom: 20px;}
+  .section9 .col-sm-4 p {text-align: justify !important;}
+  	.section9 .col-sm-6, .section9 .col-sm-6 .form-group {margin-bottom: 0px;}
+	.section8 i {padding-left: 15px !important;}
+		footer p {text-align: center !important;}
+ }
+@media only screen and (min-width : 1400px){
+	.lead-p, p {text-align: center !important;}
+	 .jumbotron {  background: url(images/header/banner-lg.jpg); background-size: cover;background-repeat: no-repeat;background-position: center center;  padding: 0;   margin-bottom: 0;  width: 100%;  height: 800px;}
+ #element_to_pop_up, #element_to_pop_up2, #element_to_pop_up3 { max-width: 1000px !important; padding: 50px !important;}
+ #element_to_pop_up  h3, #element_to_pop_up2  h3, #element_to_pop_up3 h3 {padding-bottom: 10px !important;}
+  #my-button, #my-button2, #my-button3 {margin-top: 0;}
+   #my-button2 {margin-left: 45px !important; margin-right: 45px;}
+   #my-button3 {margin-left: 0 !important;}
+  body, html {  height: 100%;  width: 100%;}
+.jumbotron .container {  padding-right: 0;  padding-left: 0;}
+.polarys {left: 0; margin: initial !important;}
+.section2 p, .section3 p {text-align: center !important;}
+.section4 h3 {margin-bottom: 0 !important;}
+.section4 .col-sm-4 a {	float: right;}
+ .section4 {  background-color: #00FF00;  background: url(images/section4/bg-cartao.jpg);  background-size: cover;	background-repeat: no-repeat;	background-position: bottom center;}
+.section5 h3:nth-child(3) {text-align: left !important;}
+ .carousel {min-height: 1px;}
+.section7 .col-sm-8, .col-sm-4, .col-sm-6, .col-sm-12 { padding-left: 15px; padding-right: 15px;}
+.section5 p, .section5 .lead-p, .section7 p {text-align: justify !important;}
+   .section8 {	background: #fff url(images/section8/bg-section8.jpg);	background-size: cover;	background-repeat: no-repeat;	background-position: center center;}
+    .section9 .col-sm-4 p {text-align: justify !important;}
+	.section9 .col-sm-6, .section9 .col-sm-6 .form-group {margin-bottom: 0px;}
+	.section9 .col-sm-12, .section9 .col-sm-4, .col-sm-8, .col-sm-6, .col-sm-4 {padding-left: 15px; padding-right: 15px; margin-bottom: 20px;}
+	.section9 .form-control {font-size: 12px;}
+  .section8 i {padding-left: 15px !important;}
+  	footer p {text-align: center !important;}
+  
+  
+  
 }
 

@@ -20,7 +20,7 @@
 		<meta name="robots" content="All" />
 
 		<!--THIS IS THE H1, H2 and TEXT-->
-		<link href="https://fonts.googleapis.com/css?family=Montserrat:300,700|Raleway:400" rel="stylesheet"> 
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:200,700|Raleway:400" rel="stylesheet"> 
 
 		<!--THIS IS FOR THE FONT AWESOME ICONS-->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -28,7 +28,6 @@
 		<!-- BOOTSTRAP CSS and style -->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="style.css" rel="stylesheet">
-		<link rel="stylesheet" href="css/unslider.css">
 		<link href="css/animate.min.css" rel="stylesheet">
 		<link href="css/hover-min.css" rel="stylesheet" media="all">
 		
@@ -41,6 +40,38 @@
 		<link rel="shortcut icon" href="../images/favicon/favicon-32.png">
 		<link rel="shortcut icon" href="../images/favicon/favicon-16.png">
 		<link rel="shortcut icon" href="../images/favicon/favicon.ico" type="image/x-icon">
+
+		<script language="javascript" type="text/javascript">  
+    
+			function format(num){
+				var n = num.toString(), p = n.indexOf('.');
+				return n.replace(/\d(?=(?:\d{3})+(?:\.|$))/g, function($0, i){
+					return p<0 || i<p ? ($0+',') : $0;
+				});
+			}
+
+
+			function multiply(){  
+			
+			var valorsesion = parseFloat(document.calculatorb.numbera.value.replace(",", "."));
+			
+			a=Number(document.calculatorb.numbera.value);  
+			b=Number(document.calculatorb.numberb.value);  
+			c=valorsesion*b; 
+			
+			var unformated = format(c.toFixed(2)).split(".");
+			var parteentera = unformated[0].replace(",", ".");
+			
+			var numerofinal = [parteentera, unformated[1]].join(",");
+			
+			document.calculatorb.totalb.value="R$  " + numerofinal;  
+			}  
+
+
+		</script>  
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+			<script src="js/bootstrap.min.js"></script>
+
 	</head>
 
 	<body>
@@ -56,7 +87,7 @@
 							<!-- Brand and toggle get grouped for better mobile display -->
 							<div class="navbar-header">
 									
-								<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+								<button type="button" id="menu-icon" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
 									<span class="sr-only">Toggle navigation</span>
 									<span class="icon-bar"></span>
 									<span class="icon-bar"></span>
@@ -77,8 +108,9 @@
 								<ul class="nav navbar-nav navbar-right" id="bs-example-navbar-collapse-2">
 									<li><a data-scroll href="#Home" class="hvr-underline-reveal" >Home</a></li>
 									<li><a data-scroll href="#Sobre" class="hvr-underline-reveal">Sobre Incanto</a></li>
-									<li><a data-scroll href="#Services" class="hvr-underline-reveal">Servi&ccedil;os</a></li>
-									<li><a data-scroll href="#Aparelhos" class="hvr-underline-reveal">Aparelhos</a></li>
+									<li><a data-scroll href="#Calculadora" class="hvr-underline-reveal">Calculadora</a></li>
+									<li><a data-scroll href="#Cartao" class="hvr-underline-reveal">Cart&atilde;o Fidelidade</a></li>
+									<li><a data-scroll href="#Equipamento" class="hvr-underline-reveal">Polarys</a></li>
 									<li><a data-scroll href="#Contato" class="hvr-underline-reveal">Contato</a></li>
 								</ul>
 							</div>
@@ -90,46 +122,182 @@
 								<ul class="nav navbar-nav navbar-right">
 									<li><a data-scroll data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" href="#Home" class="hvr-underline-reveal">Home</a></li>
 									<li><a data-scroll data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" href="#Sobre" class="hvr-underline-reveal">Sobre Incanto</a></li>
-									<li><a data-scroll data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" href="#Services" class="hvr-underline-reveal">Servi&ccedil;os</a></li>
-									<li><a data-scroll data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" href="#Aparelhos" class="hvr-underline-reveal">Aparelhos</a></li>
+									<li><a data-scroll data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" href="#Calculadora" class="hvr-underline-reveal">Calculadora</a></li>
+									<li><a data-scroll data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" href="#Cartao" class="hvr-underline-reveal">Cart&atilde;o Fidelidade</a></li>
+									<li><a data-scroll data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" href="#Equipamento" class="hvr-underline-reveal">Polarys</a></li>
 									<li><a data-scroll data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" href="#Contato" class="hvr-underline-reveal">Contato</a></li>
 								</ul>
 							</div><!-- /.navbar-collapse -->
 							</div>
 					</nav><!-- /.nav -->
 				</div><!-- /.row -->
+				
 			</div><!-- /.container-->
-			<div class="row text-center" style="margin-left: 0; margin-right: 0;">
-					<div class="slider">
-			   			<ul>
-							<li style="background-image: url(images/slider/1.jpg);background-size: cover;"><h1>text 1</h1></li>
-			   			 	<li style="background-image: url(images/slider/1.jpg);background-size: cover;"><h1>text 2</h1></li>
-			   			 	<li style="background-image: url(images/slider/1.jpg);background-size: cover;"><h1>text 3</h1></li>	
-						</ul>
-					</div>
-				</div>
+
+		
+
 
 		</div> 	<!--==================================== END JUMBOTRON ==================================-->
 
 	<!--======================================================= SECTION 1 ===========================================================-->
-	
-			<!--==================================== END SECTION 1 ==================================-->
+	<div class="section1">
+			<div class="container wow zoomIn">
+				<a name="Sobre" id="Sobre"></a>
+					
+				<div class="row text-center">
+				<div class="col-sm-12">
+					<h1>Por que Incanto?</h1><hr style="border: 2px solid #b4d560; margin: 0 auto; display: block; width: 10%; margin-top: -20px;">
+					<p class="lead-p" style="margin-top: 40px;">Incanto é uma empresa de locação de máquinas para estética especializada de alta tecnologia. 
+					Trabalhamos com a mais inovadora e atualizada tecnologia no mercado. Sabemos que o nosso atendimento deve ser à altura da nossa tecnologia
+					e por isso temos dedicação completa para desenvolver relações duradouras com os nossos clientes procurando surpreendê-los.
+
+					</p>
+				</div>
+				</div>
+
+				<div class="spacer hidden-xs"></div>
+
+				<div class="row text-center">
+					<div class="col-sm-6">
+					<img class="img-responsive visible-xs" src="images/section1/section1.jpg" alt-text="Incanto"/>
+						<h3><span class="line-h3">Nossa Equipe<span class="line-h3"></h3>
+						<p>Nossa equipe tem total comprometimento com horários de entrega e recolhimento dos equipamentos,
+						procurando sempre chegar com antecedência no local de entrega para que a instalação seja adequada
+						e a locação aproveitada ao máximo.
+
+						</p>
+						<br>
+						<h3><span class="line-h3">Benefícios <span class="hidden-xs">exclusivos</span><span class="line-h3"></h3>
+						<ul class="list-why">
+							<li>Treinamentos para os locatários, com profissionais especializados, sem custos,
+							para que haja manuseio adequado e que os tratamentos tenham resultados maximizados.
+							</li>
+							<li>Cartão Fidelidade Incanto que disponibiliza 50% de desconto na sexta locação, para aqueles que desejam parceria continua.</li>
+							<li>Total comprometimento com horários de entrega e recolhimento dos equipamentos, instalação adequada e locação aproveitada ao máximo.</li>
+							<li>Atendimento personalizado aos nossos clientes através do celular, WhatsApp e e-mail.</li>
+
+						</ul>
+						
+						<div class="hidden-xs hidden-sm">
+						<a data-scroll href="#Reservar"><button id="btn-reserva" class="btn btn-warning">RESERVE AGORA!</button></a>
+						</div>
+						
+						
+					</div>
+					<div class="col-sm-6">
+						<img class="img-responsive hidden-xs" src="images/section1/section1.jpg" alt-text="Incanto"/>
+						<div class="visible-xs visible-sm">
+						<a data-scroll href="#Reservar"><button id="btn-reserva" class="btn btn-warning">RESERVE AGORA!</button></a>
+						</div>
+					</div>
+
+				</div>
+						 
+
+
+
+			</div><!-- /.container -->
+	</div><!--==================================== END SECTION 1 ==================================-->
 		
 
 
 <!--======================================================= SECTION 2 ===========================================================-->
 		<div class="section2">
-			<div class="container">
-			<a name="Services" id="Services"></a>
+			<div class="container wow zoomIn">
+			<a name="Calculadora" id="Calculadora"></a>
 				
+				<div class="row text-center">
+					<h2 style="color: #fff; line-height: 1.3; margin-bottom: 60px;">Rápida simulação de lucro<br class="visible-lg visible-md visible-sm"> com um dia de uso da máquina!</h2>
+					
+					<div class="col-lg-12">
+						<p style="color: #fff;">A máquina contém dois aplicadores que podem agir de forma simultânea ou individual.<br class="hidden-xs"> Assim, você consegue fazer 2 aplicações por hora.</p>
+					</div>
+					
+					<div class="col-lg-12">
+						<p style="color: #fff;" id="calculator-example">Ex: 12 hrs de locação x 2 aplicações/hr <span class="hidden-xs">=</span> <br class="visible-xs">
+						   24 Áreas x Valor da área<br>
+						   24x R$ 450,00 = R$ 10.800,00
+					   </p>
+				   </div>
+				</div>
+
+				<div class="row text-center">				
+
+					<form name="calculatorb">  
+	      			
+	      			<div class="row text-center" style="margin-top: 14px;">
+					    <!-- Here user will enter 1st number. -->   
+					    <p style="display: inline-block; text-align: left; letter-spacing: 3px;">VALOR M&Eacute;DIO POR SESS&Atilde;O:</p><br class="visible-xs">
+					     <input type="text" name="numbera" class="box" placeholder="Ex: 300" style="margin-left:15px; display: inline-block; text-align: center;"> 
+					    
+				 	</div>      
+					
+					<div class="row"> 
+					<hr style="width: 60%; border-color: 1px solid #fff;">
+					</div>
+
+					<div class="row text-center" style="margin-bottom: 30px;">      
+					    <!-- Here user will enter 2nd number. -->   
+					     <p style="display: inline-block; text-align: left; margin-left: -13px; letter-spacing: 3px;">M&Eacute;DIA DE SESS&Otilde;ES POR DIA:</p><br class="visible-xs">
+					    <input type="text" class="box" name="numberb" placeholder="Ex: 5" style="margin-left:15px;display: inline-block; text-align: center;">   
+					</div>      
+
+					     <!-- Here respective button when clicked, calls only respective artimetic function. -->   
+					<div class="col-md-12">    
+					    <input type="button" class="btn-calculator" value="CALCULE AGORA!" onclick="javascript:multiply();">    
+					</div>
+					
+					<div class="col-md-12 text-center">    
+					    <!-- Here result will be displayed. -->   
+					    <p class="p-lucro2" style="letter-spacing: 3px;">LUCRO POR DIA DE ALUGUEL:</p>
+					   <input class="total" type="text" name="totalb">       
+					</div>
+
+	   				 </form>  
+
+   				 </div>
 			</div><!-- /.container -->
 		</div><!--==================================== END SECTION 2 ==================================-->
 
 <!--======================================================= SECTION 3 ===========================================================-->
 		<div class="section3">
-			<div class="container">
-			<a name="Aparelhos" id="Aparelhos"></a>
+			<div class="container wow zoomIn">
+			<a name="Cartao" id="Cartao"></a>
 				
+			<div class="row text-center">
+				<div class="col-sm-12">
+					<h1>Cart&Atilde;o fidelidade</h1><hr style="border: 2px solid #b4d560; margin: 0 auto; display: block; width: 10%; margin-top: -20px;">
+					<p class="lead-p" style="margin-top: 40px;">Com o Cartão Fidelidade Incanto<br class="visible-sm"> voc&ecirc; tem muitos benefícios e vantagens para tirar proveito:
+
+					</p>
+				</div>
+				</div>
+
+		
+				
+				<div class="row text-center">
+					
+					<div class="col-sm-6">
+						<i class="fa fa-trophy fa-4x wow zoomIn hvr-bounce-in"  data-wow-delay="0.3s"></i>
+						<h3>A 6ta por 50% OFF!</h3>
+						<p>Descontos de 50% na sexta locação feita de forma contínua.</p>
+						<p class="condicoes"><strong>Condições:</strong>
+							<br> 5 locações do equipamento no período de 12 meses.
+							<br>Marcar no Instagram e Facebook locação feita pela Incanto.
+							<br>Divulgar no mínimo 1 foto nas redes sociais marcando a Incanto.
+						</p>
+					</div>
+
+					<div class="col-sm-6">
+						<i class="fa fa-user-plus fa-4x wow zoomIn hvr-bounce-in"  data-wow-delay="0.3s"></i>
+						<h3>Indique e ganhe!</h3>
+						<p>Obtenha um desconto de 10% na próxima locação e ganhe 2 mantas <strong>Ice Protection</strong> de graça ao indicar um parceiro que realize uma locação com Incanto.</p>
+					</div>
+
+					
+
+				</div>
+
 			</div><!-- /.container -->
 		</div><!--==================================== END SECTION 3 ==================================-->
 
@@ -137,8 +305,17 @@
 
 		<div class="section4">	
 			<div class="container wow zoomIn" data-wow-delay="0.3s">
-			<a name="Contato" id="Contato"></a>
+			<a name="Promo" id="Promo"></a>
+			<div class="row">
+				<div class="col-sm-12 col-md-8">
+					<h3 style="color: #fff; text-align: left; margin-bottom: 0;">Fa&ccedil;a agora o seu cart&Atilde;o Incanto<br class="hidden-xs"> e a 6<span style="font-size: 0.4em; position: relative; top: -9px;">ta</span> loca&ccedil;&Atilde;o vem com 50% OFF!</h3>
+				</div>
 
+				<div class="col-sm-12 col-md-4 text-center">
+					<a data-scroll href="#Reservar"><button id="btn-reserva" class="btn btn-warning">Peça já o seu cartão</button></a>
+				</div>
+			</div>
+			
 
 			</div><!-- /.container -->	
 		</div><!--==================================== END SECTION 4 ==================================-->
@@ -147,52 +324,497 @@
 
 <!--======================================================= SECTION 5 ===========================================================-->
 		<div class="section5">
-			<div class="container">
-					<div class="row text-center">
-					
-					<a href="#"><i class="fa fa-facebook wow zoomIn hvr-bounce-in"  data-wow-delay="0.3s"></i></a>
-					<a href="#"><i class="fa fa-twitter wow zoomIn hvr-bounce-in"  data-wow-delay="0.6s"></i></a>
-					<a href="#"><i class="fa fa-instagram wow zoomIn hvr-bounce-in"  data-wow-delay="0.9s"></i></a>
-					<a href="#"><i class="fa fa-google-plus wow zoomIn hvr-bounce-in"  data-wow-delay="1.2s"></i></a>
+			<div class="container wow zoomIn">
+			<a name="Equipamento" id="Equipamento"></a>
+
+				<div class="row text-center">
+					<div class="col-sm-12">
+						<h1>Equipamento</h1><hr style="border: 2px solid #b4d560; margin: 0 auto; display: block; width: 10%; margin-top: -20px;">
+						<p class="lead-p" style="margin-top: 40px;">O Polarys é um aparelho com uma avançada tecnologia voltada para redução da gordura 
+						localizada e modelagem não invasiva do contorno corporal por meio do sistema inovador de criolipólise. 
+						</p>
+					</div>
 				</div>
+				
+				<div class="spacer hidden-xs hidden-sm"></div>
+				
+				<div class="row">
+					<div class="col-sm-6">
+						<img src="images/section5/aparelho-crio.png" class="img-responsive visible-xs">	
+						<img src="images/section5/polarys.jpg" class="img-responsive polarys" width="150px" height="30px">
+						<h3 style="text-align: left;">Polarys Ibramed	<i class="fa fa-registered wow zoomIn hvr-bounce-in" style="font-size: 9px; margin-left: -7px; position: relative; top: -5px;"  data-wow-delay="0.3s"></i><br>
+						<small>Aparelho de Criolipólise Convencional<br class="visible-lg"> e de Contraste</small></h3>
+						<p>A MAIS NOVA TECNOLOGIA EM CRIOLIPÓLISE DE CONTRASTE DO PAÍS, garantindo assim a redução da camada adiposa com resultados aparentes a partir da 3ª semana do tratamento.<br>
+						Clique nos botões para ler informação detalhada do aparelho que está revolucionando o Brasil!</p>
+						<h3><span class="line-h3">DADOS TÉCNICOS</h3>
+						<ul style="padding-left: 16px; line-height: 1.9em;">
+							<li><strong>Marca:</strong> Ibramed</li> 
+							<li><strong>Modelo:</strong> Polarys Criolipólise</li> 
+							<li><strong>Dimensões:</strong> 43x45x121cm (LxPxA)</li> 
+							<li><strong>Peso:</strong> 34,6 Kg</li> 
+							 
+						</ul>
+					</div>
+
+					
+					<div class="col-sm-6">
+						<img src="images/section5/aparelho-crio.png" class="img-responsive hidden-xs" style="margin:0 auto;">
+					</div> 
+				</div>
+				
+				<div class="row text-center" id="buttons-row">
+						<!-- Button that triggers the popup -->
+						<button id="my-button" class="btn btn-warning ">DESCRIÇÃO</button>
+						<!-- Element to pop up -->
+						
+						<div id="element_to_pop_up">
+						    
+							 <a class="b-close">x</a>
+						   	
+							<h3>DESCRIÇÃO DA POLARYS</h3>
+							<hr style="border: 2px solid #b4d560; margin: 0 auto; display: block; width: 10%; margin-top: -20px; margin-bottom: 40px;">
+							
+						    <p>O termo Criolipólise defini-se como seleção e resfriamento. Onde acontece a seleção da célula de gordura e em seguida o resfriamento dessa célula. Que gera uma cristalização da célula adipócita, ocorrendo assim a apoptose da célula (morte programada). Este fenômeno é o principal aliado nos tratamentos de gordura localizada, eliminando assim de 25% a 30% da camada adipócita.</p>
+
+						    <p>
+							A Criolipólise Polarys da Ibramed oferece diferencial em sua tecnologia: Criolipólise Convencional, de contraste, de Reperfusão e de preparo, onde ocorre um pré e pós aquecimento entre o resfriamento, garantindo assim 42% de redução da camada adipócita com resultados aparentes à partir da 3º sessão de tratamento. É um tratamento seguro por apresentar um sistema de resfriamento eficaz que garante a estabilidade da temperatura selecionada durante o uso simultâneo de ambos os aplicadores em todo tempo de tratamento. Permite o ajuste da temperatura no display (variável -8°C à +8°C), com visualização real e instantânea da temperatura do aplicador, evitando efeitos adversos como a tão temida queimadura.
+							</p>
+
+							<p>
+							Acompanha 5 aplicadores de diversos tamanhos sendo, 2 Tamanho M, 2 Tamanho P e 1 Tamanho G. o que permite o tratamento de diferentes áreas e biótipos. Possibilita o uso de dois aplicadores com controles independentes trabalhando simultaneamente para melhores resultados, com manutenção efetiva e individual de temperatura.
+							</p>
+
+							<p>
+							Sistema de vácuo efetivo na manutenção da sucção durante o uso simultâneo dos aplicadores. Possui vácuo contínuo, e 3 modos de pulsado, o que garante tratamento de áreas mais doloridas e aderidas com maior conforto e menor risco de equimoses. O controle do modo e intensidade do vácuo pode ser realizado no próprio aplicador.
+							</p>
+
+							<p>
+							Para a Criolipólise de Contraste, de Reperfusão e de Preparo, o equipamento possibilita o ajuste do tempo de aquecimento pré e/ou pós resfriamento. Possui Modo de seleção manual para livre programação dos parâmetros e Steps Mode para criar e salvar modos de tratamento personalizados.
+							</p>
+							<p>
+							Ainda conta com o sistema Clean Mode, sistema de autolimpeza dos aplicadores e cabos, o que garante a higi-enização efetiva, praticidade e maior durabilidade do equipamento. 
+							</p>
+						   
+						</div>
+
+						<!-- Button that triggers the popup -->
+						<button id="my-button2" class="btn btn-warning ">MECÂNISMO DE AÇÃO</button>
+						<!-- Element to pop up -->
+						<div id="element_to_pop_up2">
+						    <a class="b-close">x</a>
+						    <h3>MECÂNISMO DE AÇÃO</h3>
+							<hr style="border: 2px solid #b4d560; margin: 0 auto; display: block; width: 10%; margin-top: -20px; margin-bottom: 40px;">
+							
+						    <p>
+							A Criolipólise Convencional pode ser descrita como sendo um sistema que atua por meio do resfri-amento (extração de temperatura) em conjunto a um sistema de sucção a vácuo assistido, gerando cristalização e subsequente apoptose das células do tecido adiposo. 
+							</p>
+							
+							<p>
+							A Criolipólise de Contraste inclui períodos de aquecimento no início e no final do procedimento. A técnica se baseia no uso da temperagem (calor/frio/calor - técnica utilizada na indústria alimentícia para induzir a cristalização de lipídeos) para favorecer a cristalização do maior número de adipócitos com a possibilidade de uma maior destruição celular.
+							</p>
+							
+							<p>
+							A Criolipólise de Reperfusão inclui período de aquecimento no final do procedimento. O uso do calor após o tratamento convencional pode se sustentar também pela hipótese da formação de espécies reativas de oxigênio, pois favorece a reperfusão/recuperação tecidual de forma possivelmente mais acentuada com melhora de resultados por indução de danos adicionais aos adipócitos do local tratado. 
+							</p>
+							
+							<p>
+							A Criolipólise de Preparo inclui períodos de aquecimento no início do procedimento. Objetiva au-mentar a maleabilidade de tecidos mais compactados e favorecer a sucção do tecido pelo aplicador.
+							</p>
+						</div>
+						
+						
+						
+						<!-- Button that triggers the popup -->
+						<button id="my-button3" class="btn btn-warning ">AÇÕES E BENEFÍCIOS</button>
+						<!-- Element to pop up -->
+						<div id="element_to_pop_up3">
+						    <a class="b-close">x</a>
+						    <h3>AÇÕES E BENEFÍCIOS</h3>
+							<hr style="border: 2px solid #b4d560; margin: 0 auto; display: block; width: 10%; margin-top: -20px; margin-bottom: 40px;">
+							
+						    <ul class="list-why" style="font-size: 1.3em; text-align: left;">
+								<li>Led Vermelho que indica o pré e pós aquecimento</li> 
+								<li>Led Verde que indica o momento do resfriamento</li>
+								<li>Modalidade totalmente prográmavel permitindo ao terapeuta realizar o aquecimento isolado ou aquecimento e resfriamento simultâneamente</li>
+								<li>Reservatório de água com grande capacidade de armazenamento (aproximadamente 10 li-tros), otimizando a extração de temperatura</li>
+								<li>Controle fiel da temperatura do Peltier: visualização real e instantânea da temperatura, ajustável de -8°C à +8°C. Estudos comprovam que temperaturas negativas não potencializam o efeito, aumentando o risco de lesão ou reação adversa.</li>
+								<li>4 modos de vácuo: contínuo e pulsado 1, 2 e 3. Os modos pulsados permitem o tratamento de áreas mais doloridas e aderidas com maior conforto e menor risco de hematomas. Efetivo em manter a sucção no uso simultâneo dos aplicadores</li>
+								<li>Acessórios personalizados e funcionais: almofadas e faixas elásticas para suporte do aplicador, réguas para demarcação da área a ser tratada e fluido higienizante para pele e aplicador</li>
+								<li>Diversos tamanho de aplicadores, o que permite o tratamento de diferentes áreas e biótipos</li>
+								<li>Senha para desbloqueio: acesso permitido somente para pessoas autorizada</li>
+								<li>Uso simultâneo de 2 aplicadores com controles independentes</li>
+								<li>Possibilidade de até 8 aplicadores</li>
+								<li>Ajuste da temperatura no display</li>
+								<li>Visualização da temperatura real instantânea no display</li>
+								<li>Ajuste do tempo de aquecimento pré e pós-resfriamento (1-10 min)</li>
+								<li>Modo contínuo e pulsado do vácuo</li>
+								<li>Controle do vácuo por meio do aplicador</li>
+								<li>MANUAL SELECT para programação independente dos aplicadores</li>
+								<li>STEPS MODE para criar e salvar modos de tratamento personalizados</li>
+								<li>CLEAN MODE para higienizar de forma automática os aplicadores e cabos</li>
+								<li>Sistema eficaz no resfriamento (~ 10 litros de agua)</li>
+								<li>Design moderno e fácil deslocamento</li>
+								<li>Tutorial informativo promovendo praticidade ao profissional</li>
+							</ul>
+						</div>
+						
+						
+				</div>
+
 			</div><!-- /.container -->
 		</div><!--==================================== END SECTION 5 ==================================-->
 
-<!--======================================================= SECTION 6 ===========================================================-->
-		<div class="section6">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-12 text-center">
+		<div class="section7">
+ 			<div class="container  wow zoomIn">
 
-						<div class="footer-img wow zoomIn hvr-float-shadow"  data-wow-delay="0.5s">
-							<img src="images/section9/ChopoChickenLogoFooter.svg" alt="Chopo Chicken Footer Logo" class="img-responsive"/>
-						</div>
-
-						<div class="footer wow zoomIn"  data-wow-delay="1s">
-							<small><strong>Chopo Chicken &#xae;. 2016. </strong> All Rights Reserved.</small>
-						</div>
-
-						<div class="footer wow zoomIn"  data-wow-delay="1s">
-							<small>Website <span class="glyphicon glyphicon-console"></span> by <a href="www.pocoloco.com.br" target="_blank" title="POCOLOCO - Online Agency" style="color: #888;">POCOLOCO</a> with <span class="glyphicon glyphicon-heart"></span>  </small>
-						</div>
-
-					</div>
-				</div><!-- /.row -->
-			</div><!-- /.container -->
-		</div><!--==================================== END SECTION 6 ==================================-->
+			<div class="row text-center" style="margin-top: 0;">
+				<h1 style="margin-top: 0;">Depoimentos</h1><hr style="border: 2px solid #b4d560; margin: 0 auto; display: block; width: 10%; margin-top: -20px;">
+			</div>
+			
+ 			
+ 				<div class='row' style="margin-top: 30px;">
+				    <div class='col-md-offset-2 col-md-8'>
+				      <div class="carousel slide" data-ride="carousel" id="quote-carousel">
+				        
+								        
+				        <!-- Carousel Slides / Quotes -->
+				        <div class="carousel-inner">
+				        
+				          <!-- Quote 1 -->
+				          <div class="item active">
+				            <blockquote>
+				              <div class="row text-center">
+				              
+				                <div class="col-sm-12">
+				                  <p>"Recomendo a empresa Incanto Locações, já realizei a locação do equipamento de Criolipolise. Muita pontualidade, equipamento em boas condições além da simpatia e assistência da fisioterapeuta Giuliana Petenucci."</p>
+				                  <small>Fisioterapeuta Dermatofuncional Elisandra Vaz<br>(CREFITO 37598-7) - SP</small>
+				                </div>
+				              </div>
+				            </blockquote>
+				          </div>
+				          <!-- Quote 2 -->
+				          <div class="item">
+				            <blockquote>
+				              <div class="row text-center">
+				                
+				                <div class="col-sm-12">
+				                  <p>"Alugo os equipamentos com a Incanto, tanto Luz Pulsada, quanto Criolipólise, de olhos fechados.
+										O agendamento é feito de forma organizada e a entrega e retirada são feitas no horário combinado.
+										O que me fez procurar a empresa Incanto, foi de que todos os equipamentos possuem registrado da Anvisa e as mantas usadas na Criolipólise também."</p>
+				                  <small>Dra. Andreza Carvalho Silva<br>(CREFITO 124000/F-3) - SP</small>
+				                </div>
+				              </div>
+				            </blockquote>
+				          </div>
+				          <!-- Quote 3 -->
+				          <div class="item">
+				            <blockquote>
+				              <div class="row text-center">
+				                
+				                <div class="col-sm-12">
+				                  <p>"It's true, you can never eat a pet you name. And anyway, I did my first show in the third grade it would be like a ventriloquist eating his dummy."</p>
+				                  <small>pancho de la villa (Brasil)</small>
+				                </div>
+				              </div>
+				            </blockquote>
+				          </div>
+				        </div>
+				        
+						<!-- Bottom Carousel Indicators -->
+				        <ol class="carousel-indicators">
+				          <li data-target="#quote-carousel" data-slide-to="0" class="active"></li>
+				          <li data-target="#quote-carousel" data-slide-to="1"></li>
+				          <li data-target="#quote-carousel" data-slide-to="2"></li>
+				        </ol>
+						
+				        <!-- Carousel Buttons Next/Prev -->
+				        <div class="hidden-xs hidden-sm">
+				        <a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="fa fa-angle-left"></i></a>
+				        <a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-angle-right"></i></a>
+				        </div>
+				      </div>                          
+				    </div>
+				  </div>
+ 			</div>
+ 		</div> <!--    END SECTION 7 -->
+	
+	
+	
+		<div class="section8">	
+			<div class="container wow zoomIn">
 		
+			<div class="row text-center">
+				
+						<h3 style="color: #fff; margin-bottom: 20px;"> Redes Sociais de #Incanto</h3>
+						<hr style="border: 1px solid #fff; margin: 0 auto; display: block; width: 100%; margin-bottom: 15px;">
+						<p class="lead-p" style="margin-bottom: 15px; color:#fff;">Fique por dentro das promoções e novidades de Incanto através das redes sociais.</p>
+						
+						<div class="social-info" style="font-size:1.3em;color:#fff;">				
+						<i class="fa fa-whatsapp" aria-hidden="true" style="padding-right:10px;"></i>(11) 96411-5165<br class="visible-xs">
+						<i class="fa fa-instagram" aria-hidden="true" style="padding-left:20px; padding-right:10px;"></i><a href="#" target="_blank" data-title="Instagram de Incanto"><small>@incantolocacao</small></a><br class="visible-xs">
+						<i class="fa fa-facebook" aria-hidden="true" style="padding-left:20px; padding-right:10px;"></i><a href="#" target="_blank" data-title="Instagram de Incanto"><small>/incantolocacao</small></a><br class="visible-xs">
+						</div>
+						<hr style="border: 1px solid #fff; margin: 0 auto; display: block; width: 100%; margin-top: 15px; margin-bottom: 15px;">
+				
+			</div>
+			
 
+			</div><!-- /.container -->	
+		</div><!--==================================== END SECTION 8 ==================================-->
+		<div class="section9">
+			<div class="container wow zoomIn">
+			<a name="Reservar" id="Reservar"></a>
+				<a name="Contato" id="Contato"></a>		
+			
+			<div class="row text-center wow zoomIn">
+				
+				
+				 <div class="col-sm-8">
+				 
+					<h3><span class="line-h3">DEIXE SUA MENSAGEM<span class="line-h3"></h3>
+					<p class="lead-p">Para reservar uma data ou criar um cartão fidelidade Incanto, preencha os seus dados e mande-nos sua mensagem. A nossa equipe entrará em contato em até 24 hrs!</p>
+                    <form id="contact-form" method="post" action="form/contact.php" role="form">
+
+                        <div class="messages"></div>
+
+                        <div class="controls">
+
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="form_name">Nome Completo*</label>
+                                        <input id="form_name" type="text" name="name" class="form-control" placeholder="Nome + Sobrenome" required="required" data-error="Insira seu nome completo.">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="form_phone">Telefone*</label>
+                                        <input id="form_phone" type="tel" name="phone" class="form-control" placeholder="(11) 9 9999-9999" required="required" data-error="Insira seu celular.">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="form_email">Email*</label>
+                                        <input id="form_email" type="email" name="email" class="form-control" placeholder="email@dominio.com.br" required="required" data-error="Insira um email válido.">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="form_subject">Assunto</label>
+                                        <input id="form_subject" type="text" name="subject" class="form-control" placeholder="Ex: Cartão Fidelidade Incanto">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <label for="form_message">Mensagem*</label>
+                                        <textarea id="form_message" name="message" class="form-control" placeholder="Escreva a sua mensagem..." rows="4" required="required" data-error="Por favor, insira uma mensagem antes de enviar."></textarea>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <input type="submit" class="btn btn-success btn-send" value="Enviar Mensagem">
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+
+                    </form>
+
+                </div><!-- /.8 -->
+				
+				<div class="col-sm-4">
+					<span class="visible-lg" style="margin-bottom: 5px;"></span>
+					<h4 style="text-align: left; text-transform: uppercase; font-weight: 700;">Atendimento online</h4>
+					<p style="text-align: justify;">Pode entrar em contato conosco a qualquer momento! Ligue ou mande uma mensagem e faça uma cotação da locação agora!</p>
+
+					<p style="margin-bottom: 0; text-align: left;"><i class="fa fa-envelope-o" aria-hidden="true" style="font-size: 15px;"></i>&nbsp; contato@incanto.com.br</p>
+					<p style="text-align: left;"><i class="fa fa-whatsapp" aria-hidden="true" style="font-size: 17px;"></i>&nbsp; (11) 96411-5165</p>
+					
+				
+				</div>
+
+				
+
+
+					
+				</div>
+			
+			
+			</div>
+		</div><!--==================================== END SECTION 9 ==================================-->
+		
+		
+		
+		
+		<footer>
+			<div class="container wow zoomIn">
+				<div class="row text-center"> 
+					
+					<img src="images/footer/logo-incanto-white.svg" class="img-responsive" style="margin:0 auto; margin-bottom: 30px;" width="400px" height="100px">
+					
+					<ul>
+						<li><a data-scroll href="#Home" class="hvr-underline-reveal" >Home</a></li><br class="visible-xs">
+						<li><a data-scroll href="#Sobre" class="hvr-underline-reveal">Sobre Incanto</a></li><br class="visible-xs">
+						<li><a data-scroll href="#Calculadora" class="hvr-underline-reveal">Calculadora</a></li><br class="visible-xs">
+						<li><a data-scroll href="#Cartao" class="hvr-underline-reveal">Cart&atilde;o Fidelidade</a></li><br class="visible-xs">
+						<li><a data-scroll href="#Equipamento" class="hvr-underline-reveal">Polarys</a></li><br class="visible-xs">
+						<li><a data-scroll href="#Contato" class="hvr-underline-reveal">Contato</a></li>
+					</ul>
+					
+					<hr style="border-top: 1px solid #525252;">
+					<p style="color:#fff; font-size: 1em;">
+						Incanto é uma empresa de locação de máquinas, em especial a Polarys com tecnología criolipólise, para estética especializada de alta tecnologia. <br class="visible-lg"> Disponibilizamos treinamentos para os locatários, com profissionais especializados,  sem custos.
+				   </p>
+				  <hr style="border-top: 1px solid #525252; margin-bottom: 40px;">
+					
+					<small>© Incanto 2017. <!--CNPJ: 394486458-13--><br class="visible-xs"> Todos os direitos reservados.<br>
+					<i class="fa fa-pencil" data-title="Design" aria-hidden="true"></i> &amp; <i class="fa fa-code" data-title="Código" aria-hidden="true"></i> por Martin V. Olcese<br class="visible-xs"> de <a href="#" target="_blank" data-title="POCOLOCO - Agência de Design & Web">POCOLOCO</a> com <i class="fa fa-heart-o" data-title="Amor" aria-hidden="true"></i></small>
+					
+				</div>
+				
+				
+				
+				
+			</div>
+			
+			
+		
+		
+		
+		
+		
+		</footer>
 
 	
 		
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-		<script src="js/smooth-scroll.min.js"></script>
-		<script src="js/wow.min.js"></script> <script>new WOW().init();</script>
-		<script src="js/bootstrap.min.js"></script>
+	
 		<script	src="js/main.js"></script>
-		<script src="js/unslider.js"></script> <!-- but with the right path! -->
+		<script src="js/smooth-scroll.min.js"></script>
+		<!--<script src="js/unslider.js"></script>
 		<script>
-			$(function() {
-			 $('.slider').unslider() })</script>
+			jQuery(document).ready(function($) {
+				$('.my-slider').unslider();
+				
+				var slides = $('.item'),
+				i = 0;
+
+				slides
+				.on('swipeleft', function(e) {
+					unslider.prev();
+				})
+				.on('swiperight', function(e) {
+					unslider.next();
+				});
+				
+				
+			});
+			
+			
+		</script>
+		-->
+		
+		<script src="js/wow.min.js"></script> <script>new WOW().init();</script>
+		<script src="form/validator.js"></script>
+        <script src="form/contact.js"></script>
+		<script>
+		$('.carousel').carousel({
+				interval: 1000 * 10
+		});
+		</script>
+			
+		<script>
+			    // Semicolon (;) to ensure closing of earlier scripting
+			    // Encapsulation
+			    // $ is assigned to jQuery
+			    ;(function($) {
+
+			         // DOM Ready
+			        $(function() {
+
+			            // Binding a click event
+			            // From jQuery v.1.7.0 use .on() instead of .bind()
+			            $('#my-button').bind('click', function(e) {
+
+			                // Prevents the default action to be triggered. 
+			                e.preventDefault();
+
+			                // Triggering bPopup when click event is fired
+			                $('#element_to_pop_up').bPopup();
+
+			            });
+
+			        });
+
+			    })(jQuery);
+
+			      // Semicolon (;) to ensure closing of earlier scripting
+			    // Encapsulation
+			    // $ is assigned to jQuery
+			    ;(function($) {
+
+			         // DOM Ready
+			        $(function() {
+
+			            // Binding a click event
+			            // From jQuery v.1.7.0 use .on() instead of .bind()
+			            $('#my-button2').bind('click', function(e) {
+
+			                // Prevents the default action to be triggered. 
+			                e.preventDefault();
+
+			                // Triggering bPopup when click event is fired
+			                $('#element_to_pop_up2').bPopup();
+
+			            });
+
+			        });
+
+			    })(jQuery);
+				
+				 // Semicolon (;) to ensure closing of earlier scripting
+			    // Encapsulation
+			    // $ is assigned to jQuery
+			    ;(function($) {
+
+			         // DOM Ready
+			        $(function() {
+
+			            // Binding a click event
+			            // From jQuery v.1.7.0 use .on() instead of .bind()
+			            $('#my-button3').bind('click', function(e) {
+
+			                // Prevents the default action to be triggered. 
+			                e.preventDefault();
+
+			                // Triggering bPopup when click event is fired
+			                $('#element_to_pop_up3').bPopup();
+
+			            });
+
+			        });
+
+			    })(jQuery);
+
+/*================================================================================
+ * @name: bPopup - if you can't get it up, use bPopup
+ * @author: (c)Bjoern Klinggaard (twitter@bklinggaard)
+ * @demo: http://dinbror.dk/bpopup
+ * @version: 0.9.4.min
+ ================================================================================*/
+(function(b){b.fn.bPopup=function(z,F){function K(){a.contentContainer=b(a.contentContainer||c);switch(a.content){case "iframe":var h=b('<iframe class="b-iframe" '+a.iframeAttr+"></iframe>");h.appendTo(a.contentContainer);r=c.outerHeight(!0);s=c.outerWidth(!0);A();h.attr("src",a.loadUrl);k(a.loadCallback);break;case "image":A();b("<img />").load(function(){k(a.loadCallback);G(b(this))}).attr("src",a.loadUrl).hide().appendTo(a.contentContainer);break;default:A(),b('<div class="b-ajax-wrapper"></div>').load(a.loadUrl,a.loadData,function(){k(a.loadCallback);G(b(this))}).hide().appendTo(a.contentContainer)}}function A(){a.modal&&b('<div class="b-modal '+e+'"></div>').css({backgroundColor:a.modalColor,position:"fixed",top:0,right:0,bottom:0,left:0,opacity:0,zIndex:a.zIndex+t}).appendTo(a.appendTo).fadeTo(a.speed,a.opacity);D();c.data("bPopup",a).data("id",e).css({left:"slideIn"==a.transition||"slideBack"==a.transition?"slideBack"==a.transition?g.scrollLeft()+u:-1*(v+s):l(!(!a.follow[0]&&m||f)),position:a.positionStyle||"absolute",top:"slideDown"==a.transition||"slideUp"==a.transition?"slideUp"==a.transition?g.scrollTop()+w:x+-1*r:n(!(!a.follow[1]&&p||f)),"z-index":a.zIndex+t+1}).each(function(){a.appending&&b(this).appendTo(a.appendTo)});H(!0)}function q(){a.modal&&b(".b-modal."+c.data("id")).fadeTo(a.speed,0,function(){b(this).remove()});a.scrollBar||b("html").css("overflow","auto");b(".b-modal."+e).unbind("click");g.unbind("keydown."+e);d.unbind("."+e).data("bPopup",0<d.data("bPopup")-1?d.data("bPopup")-1:null);c.undelegate(".bClose, ."+a.closeClass,"click."+e,q).data("bPopup",null);H();return!1}function G(h){var b=h.width(),e=h.height(),d={};a.contentContainer.css({height:e,width:b});e>=c.height()&&(d.height=c.height());b>=c.width()&&(d.width=c.width());r=c.outerHeight(!0);s=c.outerWidth(!0);D();a.contentContainer.css({height:"auto",width:"auto"});d.left=l(!(!a.follow[0]&&m||f));d.top=n(!(!a.follow[1]&&p||f));c.animate(d,250,function(){h.show();B=E()})}function L(){d.data("bPopup",t);c.delegate(".bClose, ."+a.closeClass,"click."+e,q);a.modalClose&&b(".b-modal."+e).css("cursor","pointer").bind("click",q);M||!a.follow[0]&&!a.follow[1]||d.bind("scroll."+e,function(){B&&c.dequeue().animate({left:a.follow[0]?l(!f):"auto",top:a.follow[1]?n(!f):"auto"},a.followSpeed,a.followEasing)}).bind("resize."+e,function(){w=y.innerHeight||d.height();u=y.innerWidth||d.width();if(B=E())clearTimeout(I),I=setTimeout(function(){D();c.dequeue().each(function(){f?b(this).css({left:v,top:x}):b(this).animate({left:a.follow[0]?l(!0):"auto",top:a.follow[1]?n(!0):"auto"},a.followSpeed,a.followEasing)})},50)});a.escClose&&g.bind("keydown."+e,function(a){27==a.which&&q()})}function H(b){function d(e){c.css({display:"block",opacity:1}).animate(e,a.speed,a.easing,function(){J(b)})}switch(b?a.transition:a.transitionClose||a.transition){case "slideIn":d({left:b?l(!(!a.follow[0]&&m||f)):g.scrollLeft()-(s||c.outerWidth(!0))-C});break;case "slideBack":d({left:b?l(!(!a.follow[0]&&m||f)):g.scrollLeft()+u+C});break;case "slideDown":d({top:b?n(!(!a.follow[1]&&p||f)):g.scrollTop()-(r||c.outerHeight(!0))-C});break;case "slideUp":d({top:b?n(!(!a.follow[1]&&p||f)):g.scrollTop()+w+C});break;default:c.stop().fadeTo(a.speed,b?1:0,function(){J(b)})}}function J(b){b?(L(),k(F),a.autoClose&&setTimeout(q,a.autoClose)):(c.hide(),k(a.onClose),a.loadUrl&&(a.contentContainer.empty(),c.css({height:"auto",width:"auto"})))}function l(a){return a?v+g.scrollLeft():v}function n(a){return a?x+g.scrollTop():x}function k(a){b.isFunction(a)&&a.call(c)}function D(){x=p?a.position[1]:Math.max(0,(w-c.outerHeight(!0))/2-a.amsl);v=m?a.position[0]:(u-c.outerWidth(!0))/2;B=E()}function E(){return w>c.outerHeight(!0)&&u>c.outerWidth(!0)}b.isFunction(z)&&(F=z,z=null);var a=b.extend({},b.fn.bPopup.defaults,z);a.scrollBar||b("html").css("overflow","hidden");var c=this,g=b(document),y=window,d=b(y),w=y.innerHeight||d.height(),u=y.innerWidth||d.width(),M=/OS 6(_\d)+/i.test(navigator.userAgent),C=200,t=0,e,B,p,m,f,x,v,r,s,I;c.close=function(){a=this.data("bPopup");e="__b-popup"+d.data("bPopup")+"__";q()};return c.each(function(){b(this).data("bPopup")||(k(a.onOpen),t=(d.data("bPopup")||0)+1,e="__b-popup"+t+"__",p="auto"!==a.position[1],m="auto"!==a.position[0],f="fixed"===a.positionStyle,r=c.outerHeight(!0),s=c.outerWidth(!0),a.loadUrl?K():A())})};b.fn.bPopup.defaults={amsl:50,appending:!0,appendTo:"body",autoClose:!1,closeClass:"b-close",content:"ajax",contentContainer:!1,easing:"swing",escClose:!0,follow:[!0,!0],followEasing:"swing",followSpeed:500,iframeAttr:'scrolling="no" frameborder="0"',loadCallback:!1,loadData:!1,loadUrl:!1,modal:!0,modalClose:!0,modalColor:"#000",onClose:!1,onOpen:!1,opacity:0.7,position:["auto","auto"],positionStyle:"absolute",scrollBar:!0,speed:250,transition:"fadeIn",transitionClose:!1,zIndex:9997}})(jQuery);
+		</script>
+
+
+
+	
 	</body> 
 </html>
